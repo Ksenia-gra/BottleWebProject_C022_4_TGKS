@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BottleWebProject_C022_4_TGKS", "BottleWebProject_C022_4_TGKS\BottleWebProject_C022_4_TGKS.pyproj", "{854A6C39-D2D1-4C96-BF04-C8089416EE55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{854A6C39-D2D1-4C96-BF04-C8089416EE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{854A6C39-D2D1-4C96-BF04-C8089416EE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{854A6C39-D2D1-4C96-BF04-C8089416EE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{854A6C39-D2D1-4C96-BF04-C8089416EE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6230380A-6861-4564-82C7-AD53B1D23FA3}
+	EndGlobalSection
+EndGlobal
