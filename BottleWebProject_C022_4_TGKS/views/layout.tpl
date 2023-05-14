@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - My Bottle Application</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="/static/content/site.css" rel="stylesheet">
+    <link href="/static/content/layout.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">Application name</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="/home">
+        <img src="/static/images/logo_with_title.png" alt="" height="55" class="d-inline-block align-text-center">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse justify-content-end mr-auto" id="navbarSupportedContent" >
+      <ul class="navbar-nav mb-2 mb-lg-0 navbar-right">
+        
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Решение задач
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
+            <li><a class="dropdown-item" href="#" >Ассиметричность бинарного отношения</a></li>
+            <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
+            <li><a class="dropdown-item" href="#" >Поиск Гамильтонова цикла</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page"  href="/about">Об авторах</a>
+        </li>
+      </ul>
+      
     </div>
+  </div>
+</nav>
 
     <div class="container body-content">
         {{!base}}
         <hr />
         <footer>
-            <p>&copy; {{ year }} - My Bottle Application</p>
+            <p>&copy; {{ year }} - BottleWebProject_C022_4_TGKS</p>
         </footer>
     </div>
 
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

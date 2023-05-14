@@ -1,6 +1,5 @@
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -39,4 +38,7 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+.dropdown-item:active {
+    background-color: lightgray;
 }

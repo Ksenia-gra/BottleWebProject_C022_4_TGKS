@@ -33,6 +33,7 @@
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="static\images\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
@@ -43,11 +44,14 @@
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
+    <Content Include="static\content\layout.css" />
     <Content Include="static\content\site.css" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\images\logo.png" />
+    <Content Include="static\images\logo_with_title.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />

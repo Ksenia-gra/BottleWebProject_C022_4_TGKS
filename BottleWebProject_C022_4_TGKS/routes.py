@@ -7,6 +7,7 @@ from datetime import datetime
 
 @route('/')
 @route('/home')
+@route('/index')
 @view('index')
 def home():
     """Renders the home page."""
