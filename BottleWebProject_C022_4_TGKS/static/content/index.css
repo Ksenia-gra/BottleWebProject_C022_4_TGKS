@@ -1,0 +1,11 @@
+.index-card {
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+    border-radius: 10px;
+    background-image: url("/static/images/index_card_bg.png");
+    padding: 30px;
+}
+.theory-card {
+    padding: 20px;
+    border-radius: 10px;
+}

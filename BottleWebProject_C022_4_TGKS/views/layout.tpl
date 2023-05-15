@@ -3,14 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - My Bottle Application</title>
+    <title>{{ title }} - BottleWebProject_C022_4_TGKS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="/static/content/site.css" rel="stylesheet">
     <link href="/static/content/layout.css" rel="stylesheet">
+    <link href="/static/content/index.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
   <div class="container-fluid">
     <a class="navbar-brand " href="/home">
         <img src="/static/images/logo_with_title.png" alt="" height="55" class="d-inline-block align-text-center">
