@@ -31,11 +31,12 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="routes.py" />
-    <Compile Include="TumFunctions.py">
+    <Compile Include="logic\TumFunctions.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="logic\" />
     <Folder Include="static\images\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
