@@ -20,16 +20,24 @@ def home():
 def about():
     """Renders the about page."""
     return dict(
-        title='About',
-        message='Your application description page.',
+        title='Об авторах',
         year=datetime.now().year
     )
+
 @route('/bin_relation_transitivity')
 @view('bin_relation_transitivity')
 def bin_relation_transitivity():
     """Renders the about page."""
     return dict(
         title='Антитранзитивность бинарного отношения',
-        
+        year=datetime.now().year
+    )
+
+@route('/hamiltonian')
+@view('hamiltonian_cycle')
+def bin_relation_transitivity():
+    """Renders the about page."""
+    return dict(
+        title='Гамильтоновы циклы',
         year=datetime.now().year
     )

@@ -75,6 +75,7 @@
     <Content Include="static\scripts\_references.js" />
     <Content Include="views\about.tpl" />
     <Content Include="views\bin_relation_transitivity.tpl" />
+    <Content Include="views\hamiltonian_cycle.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
