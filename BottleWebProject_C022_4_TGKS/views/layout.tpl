@@ -29,7 +29,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
-            <li><a class="dropdown-item" href="#" >Ассиметричность бинарного отношения</a></li>
+            <li><a class="dropdown-item" href="/bin_relation_transitivity" >Ассиметричность бинарного отношения</a></li>
             <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
             <li><a class="dropdown-item" href="#" >Поиск Гамильтонова цикла</a></li>
           </ul>

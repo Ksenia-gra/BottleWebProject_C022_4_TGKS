@@ -17,7 +17,7 @@
         Граф
         </h5>
         </p>
-        <img src="/static/images/graf_img.png" alt="" height="300" class="d-inline-block align-center">
+        <img src="/static/images/graf.png" alt="" height="300" class="d-inline-block align-center">
         <p>
         Графом называется система объектов произвольной природы (вершин) и связок (ребер), соединяющих некоторые пары этих объектов. 
         Граф — это геометрическая фигура, которая состоит из точек и линий, которые их соединяют. Точки называют вершинами графа, а линии — ребрами. 
@@ -79,7 +79,7 @@
                 </p>
             </div>
             <div class="d-flex p-4">
-                <a href="#" class="btn btn-dark">Перейти к задаче ></a>
+                <a href="/bin_relation_transitivity" class="btn btn-dark">Перейти к задаче ></a>
                 </div>
         </div>
     </div>

@@ -34,3 +34,12 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
+@route('/bin_relation_transitivity')
+@view('bin_relation_transitivity')
+def bin_relation_transitivity():
+    """Renders the about page."""
+    return dict(
+        title='Антитранзитивность бинарного отношения',
+        
+        year=datetime.now().year
+    )
