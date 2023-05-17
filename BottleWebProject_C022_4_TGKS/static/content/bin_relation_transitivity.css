@@ -1,0 +1,25 @@
+.raz {
+    all: unset;
+    -moz-appearance: textfield;
+    width: 3em;
+    text-align: center;
+}
+
+    .raz::-webkit-inner-spin-button {
+        display: none;
+    }
+.button{
+    border-radius:10px;
+    border-color:transparent;
+    color:white;
+    width:100px;
+    font-size:22px;
+    font-weight:700;
+}
+.title-card {
+    margin-block-start: 30px;
+    margin-block-end: 50px;
+    border-radius: 10px;
+    background-image: url("/static/images/transit_card.png");
+    padding: 30px;
+}

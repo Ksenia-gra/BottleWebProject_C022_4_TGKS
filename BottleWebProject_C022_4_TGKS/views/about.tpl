@@ -78,7 +78,7 @@
     <div class="col offset 3">
         <div class="card card-m p-4 shadow" id="cardThree">
             <div class="card-body">
-              <img src="\static\images\photos\Sofa.jpg" class="card-title pic">
+              <img src="\static\images\photos\Sofa.png" class="card-title pic">
                 <p class="card-text fontAb">
                     Приветствую! Меня зовут <strong>Кознюк София</strong>!  <br/>
                     Мною был реализован дизайн страницы "Об авторах"   <br/>

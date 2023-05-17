@@ -54,6 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\content\bin_relation_transitivity.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\content\index.css" />
     <Content Include="static\content\layout.css" />
     <Content Include="static\content\site.css" />
@@ -71,6 +74,7 @@
     <Content Include="static\images\photos\Misha.jpg" />
     <Content Include="static\images\photos\Sofa.png" />
     <Content Include="static\images\photos\VK.jpg" />
+    <Content Include="static\images\transit_card.png" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />

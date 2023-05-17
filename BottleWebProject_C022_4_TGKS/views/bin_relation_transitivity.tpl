@@ -1,10 +1,29 @@
 % rebase('layout.tpl', title='Антитранзитивность бинарного отношения', year=year)
 
+<div class="card p-4 shadow-lg border border-dark title-card">
+
+<div class="card-body">
+
+<h5 class="card-title text-light">Определение ассиметричности и антитранзитивности бинарного отношения</h5>
+<h5 class="card-title text-light">Нахождение обратного бинарного отношения</h5>
+<br>
+        <button class="btn bg-white " data-bs-toggle="collapse" id="readMoreBtn" data-bs-target="#collapseCard" aria-expanded="false">Ассиметричность графа</button>
+<div class="collapse" id="collapseCard">
+<p class="text-light">kcklclklkv</p>
+</div>
+</div>
+</div>
+<div class="card p-4 shadow">
+<div class="card-body">
+    <h3 class="card-title"><strong>Решение задачи</strong></h5>
 
 <form method="post" action="/bin_relation_transitivity">
     <label for="vertices">Введите количество вершин:</label>
-<input type="number" name="vertices" id="vertices" min="1">
+    <br><br>
 
+<button type="button" class="button p-2 bg-black" onclick="changeValue(-1)">-</button>
+<input type="number" name="vertices" id="vertices" min="0" max="10" value="0" readonly class="raz ">
+<button type="button"  class="button p-2 bg-black" onclick="changeValue(1)">+</button>
 <br><br>
 
 <label>Введите матрицу смежности:</label>
@@ -37,6 +56,9 @@
 % end
 </tbody>
 </table>
+
+</div>
+</div>
 <script>
 // Функция для создания таблицы смежности
 function createMatrix(numVertices) {
@@ -56,11 +78,20 @@ tbody.appendChild(tr);
 }
 }
 // Обработчик события изменения количества вершин
-document.getElementById("vertices").addEventListener("keyup", function() {
-var numVertices = parseInt(this.value);
-if (!isNaN(numVertices)) {
-    document.getElementById("matrix").innerHTML = "";
-createMatrix(numVertices);
-}
-});
+function changeValue(change) {
+    // Получаем элемент input с помощью его ID
+    var input = document.getElementById("vertices");
+    // Получаем текущее значение элемента input
+    var currentValue = parseInt(input.value);
+    // Вычисляем новое значение
+    var newValue = currentValue + change;
+    // Проверяем, что новое значение находится в допустимом диапазоне (min, max)
+    if (newValue >= parseInt(input.min) && newValue <= parseInt(input.max)) {
+      // cоздаем новую матрицу
+      input.value = newValue;
+      document.getElementById("matrix").innerHTML = "";
+createMatrix(newValue);
+    }
+  }
+
 </script>
