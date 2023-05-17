@@ -33,6 +33,9 @@
     <Compile Include="logic\antitransitivity_class.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="logic\test_form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
     <Compile Include="logic\TumFunctions.py">
       <SubType>Code</SubType>
