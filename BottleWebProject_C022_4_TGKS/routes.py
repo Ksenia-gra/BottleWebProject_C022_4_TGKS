@@ -43,3 +43,12 @@ def bin_relation_transitivity():
         title='Гамильтоновы циклы',
         year=datetime.now().year
     )
+
+@route('/maximum_flow')
+@view('maximum_flow')
+def bin_relation_transitivity():
+    """Renders the about page."""
+    return dict(
+        title='Гамильтоновы циклы',
+        year=datetime.now().year
+    )
