@@ -14,26 +14,3 @@
 .func-card {
     margin-block-start: 30px;
 }
-
-.pic {
-    float: left;
-}
-
-.icon {
-    justify-content: right;
-}
-
-.fontAb {
-    font-size: 21px;
-    font-style: italic;
-}
-
-.titleAb {
-    text-align: center;
-    font-size: 40px;
-    margin-top: revert;
-}
-
-.infoText {
-    font-size: 21px;
-}

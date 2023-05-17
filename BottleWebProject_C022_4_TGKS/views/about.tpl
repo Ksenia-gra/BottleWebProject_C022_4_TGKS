@@ -1,132 +1,166 @@
 % rebase('layout.tpl', title=title, year=year)
 
-<h3 class ="titleAb">Наша команда</h3>
-<br/>
-    <p class="card-text infoText">
-        Во время прохождения учебной практики в ФСПО ГУАП преподавателями Опалевой У.С. и Бартасевич И.Г. были составлены команды для выполнения различных заданий и интеграций программных модулей, пользуясь системой контроля версий. 
-        <br/>
-        Наша команда состоит из четырёх человек: <strong>Туманова Алиса,</strong> <strong>Графова Ксения,</strong> <strong>Кознюк София,</strong> <strong>Соколов Михаил</strong>.
-    </p>
 <div class="row">
-    <div >
-        <div class="card card-m p-4 shadow" id="cardOne">
-            <div class="card-body">
-                <img src="\static\images\photos\Alisa.png" class="card-title pic">
-                    <p class="card-text fontAb">
-                    Привет! Меня зовут <strong>Туманова Алиса</strong>!    <br/>
-                    Основной моей деятельностью в этом проекте являлось реализация страницы    <br/> 
-                    с решением задачи об "Отношении эквивалентности"   <br/>
-                    и разработка дизайна главной страницы.  
-                    </p>
-            </div>
-
-            <div class="d-flex p-4 icon">
-                <a href="https://github.com/tumanovaalisa" >    
-                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
-                </a>
-                 <a href="https://vk.com/bigtumka" >    
-                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
-                </a>
-            </div>
-        </div>
+    <div class="col-8 offset-2 text-center mb-3">
+        <h3 class ="text-center fs-1 mt-3">Наша команда</h3>
+        <p class="card-text fs-5">
+            Во время прохождения учебной практики в ФСПО ГУАП преподавателями Опалевой У.С. и Бартасевич И.Г. были составлены команды для выполнения различных заданий и интеграций программных модулей, пользуясь системой контроля версий. 
+            <br/>
+            Наша команда состоит из четырёх человек: </br><strong>Туманова Алиса,</strong> <strong>Графова Ксения,</strong> <strong>Кознюк София,</strong> <strong>Соколов Михаил</strong>.
+        </p>
     </div>
+</div>
 
-   <!-- <div class="col">
-        <div class="card card-bg-m shadow-lg border border-dark" id="mainCard">
-            <div class="card-body">
-                <div class="card theory-card">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Наша команда</h3>
-                        
-                        <p class="card-text">
-                            Во время прохождения учебной практики в ФСПО ГУАП преподавателями Опалевой У.С. и Бартасевич И.Г. были составлены команды для выполнения различных заданий и интеграций программных модулей, пользуясь системой контроля версий. 
-                            <br/>
-                            Наша команда состоит из четырёх человек: <strong>Туманова Алиса,</strong> <strong>Графова Ксения,</strong> <strong>Кознюк София,</strong> <strong>Соколов Михаил</strong>.
+<div class="row">
+    <div class="card rounded-5 shadow" id="cardOne">
+        <div class="card-body d-flex">
+            <div class="border-end border-3 border-dark me-5">
+                <img src="\static\images\photos\alisa.png" class="card-title me-5">
+            </div>
+            <div class="border-end border-3 align-items-center d-flex border-dark me-5 h-100">
+                <p class="card-text fst-italic fs-5 me-3">
+                    Привет! Меня зовут <strong>Туманова Алиса</strong>!
+                    <br/>
+                    Основной моей деятельностью в этом проекте являлась реализация страницы
+                    с решением задачи об "Отношении эквивалентности"
+                    и разработка дизайна главной страницы.  
+                </p>
+            </div>
+            
+            <div class="col text-center mb-auto mt-auto me-3">
+
+                <div class="row align-items-end mb-3">
+                    <a href="https://github.com/tumanovaalisa" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\GitHub.png">
+                         <p class="text-dark fw-bold mb-0">
+                            GitHub
                         </p>
-                    </div>
+                    </a>
+                </div>
+
+                <div class="row align-items-start">
+                    <a href="https://vk.com/bigtumka" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\VK.png">
+                        <p class="text-dark fw-bold text-center mb-0">
+                            VK
+                        </p> 
+                    </a>
                 </div>
             </div>
         </div>
-    </div>-->
-
-    <div>
-        <div class="card card-m p-4 shadow" id="cardTwo">
-            <div class="card-body">
-             <img src="\static\images\photos\Ksenia.jpg" class="card-title pic">
-                <p class="card-text fontAb">
-                     Всем привет! Я <strong>Графова Ксения</strong>!  <br/>
-                     В моей функциональные обязанности входило решение   <br/>
-                     задачи об "Ассиметричности бинарного отношения",  <br/>
-                     и помимо этого я продумала и реализовала дизайн главной страницы.
-                </p>
-            </div>
-
-            <div class="d-flex p-4 icon">
-                <a href="https://github.com/Ksenia-gra">    
-                <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
-                </a>
-                <a href="https://vk.com/jesusksu" >    
-                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
-                </a>
-            </div>
-        </div>
     </div>
-
 </div>
 
-<div class="row">
-    <div class="col offset 3">
-        <div class="card card-m p-4 shadow" id="cardThree">
-            <div class="card-body">
-              <img src="\static\images\photos\Sofa.jpg" class="card-title pic">
-                <p class="card-text fontAb">
-                    Приветствую! Меня зовут <strong>Кознюк София</strong>!  <br/>
-                    Мною был реализован дизайн страницы "Об авторах"   <br/>
-                    и придуман текст для описания моих коллег. Но, основной моей задачей  <br/>
-                    было написать алгоритм для "Нахождения максимального потока в сети".
+<div class="row mt-3">
+    <div class="card rounded-5 shadow" id="cardOne">
+        <div class="card-body d-flex">
+            <div class="border-end border-3 border-dark me-5">
+                <img src="\static\images\photos\ksenia.png" class="card-title me-5">
+            </div>
+            <div class="border-end border-3 align-items-center d-flex border-dark me-5 h-100">
+                <p class="card-text fst-italic fs-5 me-5">
+                    Всем привет! Я <strong>Графова Ксения</strong>!
+                    <br/>
+                    В мои функциональные обязанности входило решение задачи об "Ассиметричности бинарного отношения", и помимо этого я продумала и реализовала дизайн главной страницы.
                 </p>
             </div>
-            <div class="d-flex p-4 icon">
-                <a href="https://github.com/sofaackingsad" >
-                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
-                </a>
-                <a href="https://vk.com/gay2012" >    
-                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
-                </a>
-            </div>
-        </div>
-    </div> 
+            
+            <div class="col text-center mb-auto mt-auto me-3">
 
-    <div >
-        <div class="card card-m p-4 shadow" id="cardFour">
-            <div class="card-body">
-                 <img src="\static\images\photos\Misha.jpg" class="card-title pic">
-                <p class="card-text fontAb">
-                    Огромный привет! Я <strong>Соколов Михаил</strong>!  <br/>
-                    Моей главной задачей было придумать и разработать решение для задания  <br/>
-                    о "Гамильтоновых циклах". Я также не оставил без внимания страницу "Об авторах",  <br/>
-                    и внес свой вклад в ее воплощение.
-                </p>
-            </div>
-            <div class="d-flex p-4 icon">
-                <a href="https://github.com/hawk0f">
-                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
-                </a>
-                <a href="https://vk.com/hawk0f" >    
-                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
-                </a>
+                <div class="row align-items-end mb-3">
+                    <a href="https://github.com/Ksenia-gra" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\GitHub.png">
+                         <p class="text-dark fw-bold mb-0">
+                            GitHub
+                        </p>
+                    </a>
+                </div>
+
+                <div class="row align-items-start">
+                    <a href="https://vk.com/jesusksu" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\VK.png">
+                        <p class="text-dark fw-bold text-center mb-0">
+                            VK
+                        </p> 
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!--<script>
+<div class="row mt-3">
+    <div class="card rounded-5 shadow" id="cardOne">
+        <div class="card-body d-flex">
+            <div class="border-end border-3 border-dark me-5">
+                <img src="\static\images\photos\sofa.png" class="card-title me-5">
+            </div>
+            <div class="border-end border-3 align-items-center d-flex border-dark me-5 h-100">
+                <p class="card-text fst-italic fs-5 me-5">
+                    Приветствую! Меня зовут <strong>Кознюк София</strong>!
+                    <br/>
+                    Мною был реализован дизайн страницы "Об авторах" и придуман текст для описания моих коллег. Но, основной моей задачей было написать алгоритм для "Нахождения максимального потока в сети". 
+                </p>
+            </div>
+            
+            <div class="col text-center mb-auto mt-auto me-3">
 
-    $(document).ready(function() {
-        var maxFirstRowWidth = Math.min($("#cardOne").width(), $("#cardTwo").width(),Math.min($("#cardFour").width(), $("#cardThree").width()))
-        $("#cardOne").width(maxFirstRowWidth)
-        $("#cardTwo").width(maxFirstRowWidth)
-        $("#cardThree").width(maxFirstRowWidth)
-        $("#cardFour").width(maxFirstRowWidth)
-    })
-</script>-->
+                <div class="row align-items-end mb-3">
+                    <a href="https://github.com/sofaackingsad" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\GitHub.png">
+                         <p class="text-dark fw-bold mb-0">
+                            GitHub
+                        </p>
+                    </a>
+                </div>
+
+                <div class="row align-items-start">
+                    <a href="https://vk.com/gay2012" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\VK.png">
+                        <p class="text-dark fw-bold text-center mb-0">
+                            VK
+                        </p> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="card rounded-5 shadow" id="cardOne">
+        <div class="card-body d-flex">
+            <div class="border-end border-3 border-dark me-5">
+                <img src="\static\images\photos\misha.png" class="card-title me-5">
+            </div>
+            <div class="border-end border-3 align-items-center d-flex border-dark me-5 h-100">
+                <p class="card-text fst-italic fs-5 me-5">
+                    Всем доброго времени суток! Я <strong>Соколов Михаил</strong>!
+                    <br/>
+                    Моей главной задачей было придумать и разработать решение для задания о "Гамильтоновых циклах". Я также не оставил без внимания страницу "Об авторах", и внес свой вклад в ее воплощение.
+                </p>
+            </div>
+            
+            <div class="col text-center mb-auto mt-auto me-3">
+
+                <div class="row align-items-end mb-3">
+                    <a href="https://github.com/hawk0f" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\GitHub.png">
+                         <p class="text-dark fw-bold mb-0">
+                            GitHub
+                        </p>
+                    </a>
+                </div>
+
+                <div class="row align-items-start">
+                    <a href="https://vk.com/hawk0f" class="text-decoration-none ps-0 pe-0">    
+                        <img src ="\static\images\photos\VK.png">
+                        <p class="text-dark fw-bold text-center mb-0">
+                            VK
+                        </p> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
