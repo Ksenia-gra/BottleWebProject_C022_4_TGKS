@@ -30,12 +30,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="logic\antitransitivity_class.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="TumFunctions.py">
+    <Compile Include="logic\TumFunctions.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="logic\" />
     <Folder Include="static\images\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
@@ -45,8 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="static\content\bootstrap.css" />
-    <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\index.css" />
     <Content Include="static\content\layout.css" />
     <Content Include="static\content\site.css" />
@@ -54,12 +56,10 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="static\images\graf_img.png" />
+    <Content Include="static\images\graf.png" />
     <Content Include="static\images\index_card_bg.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\logo_with_title.png" />
-    <Content Include="static\scripts\bootstrap.js" />
-    <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />
@@ -75,24 +75,24 @@
     <Content Include="static\scripts\_references.js" />
     <Content Include="views\about.tpl" />
     <Content Include="views\bin_relation_transitivity.tpl" />
-    <Content Include="views\contact.tpl" />
+    <Content Include="views\hamiltonian_cycle.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env1\">
       <Id>env1</Id>
-      <Version>3.6</Version>
-      <Description>env1 (Python 3.6 (32-bit))</Description>
+      <Version>3.9</Version>
+      <Description>env1 (Python 3.9 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X86</Architecture>
+      <Architecture>X64</Architecture>
     </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
-      <Version>3.7</Version>
-      <Description>env (Python 3.7 (64-bit))</Description>
+      <Version>3.11</Version>
+      <Description>env (Python 3.11 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>

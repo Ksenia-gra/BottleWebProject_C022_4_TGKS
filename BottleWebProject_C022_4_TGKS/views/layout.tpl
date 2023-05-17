@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - BottleWebProject_C022_4_TGKS</title>
+    <title>{{ title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="/static/content/site.css" rel="stylesheet">
     <link href="/static/content/layout.css" rel="stylesheet">
@@ -29,9 +29,9 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
-            <li><a class="dropdown-item" href="#" >Ассиметричность бинарного отношения</a></li>
+            <li><a class="dropdown-item" href="/bin_relation_transitivity" >Ассиметричность бинарного отношения</a></li>
             <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
-            <li><a class="dropdown-item" href="#" >Поиск Гамильтонова цикла</a></li>
+            <li><a class="dropdown-item" href="/hamiltonian" >Поиск Гамильтонова цикла</a></li>
           </ul>
         </li>
         <li class="nav-item">
