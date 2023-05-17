@@ -112,7 +112,7 @@
                 
             </div>
             <div class="d-flex p-4">
-                <a href="#" class="btn btn-dark">Перейти к задаче ></a>
+                <a href="/maximum_flow" class="btn btn-dark">Перейти к задаче ></a>
                 </div>
         </div>
     </div>
