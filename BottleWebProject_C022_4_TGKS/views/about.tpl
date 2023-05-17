@@ -11,7 +11,7 @@
     <div >
         <div class="card card-m p-4 shadow" id="cardOne">
             <div class="card-body">
-                <img src="\static\photos\Alisa.png" class="card-title pic">
+                <img src="\static\images\photos\Alisa.png" class="card-title pic">
                     <p class="card-text fontAb">
                     Привет! Меня зовут <strong>Туманова Алиса</strong>!    <br/>
                     Основной моей деятельностью в этом проекте являлось реализация страницы    <br/> 
@@ -22,10 +22,10 @@
 
             <div class="d-flex p-4 icon">
                 <a href="https://github.com/tumanovaalisa" >    
-                    <img src ="\static\photos\GitHub.jpg" width = "80" height = "80">
+                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
                 </a>
                  <a href="https://vk.com/bigtumka" >    
-                    <img src ="\static\photos\VK.jpg" width = "70" height = "70">
+                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
                 </a>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <div>
         <div class="card card-m p-4 shadow" id="cardTwo">
             <div class="card-body">
-             <img src="\static\photos\Ksenia.jpg" class="card-title pic">
+             <img src="\static\images\photos\Ksenia.jpg" class="card-title pic">
                 <p class="card-text fontAb">
                      Всем привет! Я <strong>Графова Ксения</strong>!  <br/>
                      В моей функциональные обязанности входило решение   <br/>
@@ -63,10 +63,10 @@
 
             <div class="d-flex p-4 icon">
                 <a href="https://github.com/Ksenia-gra">    
-                <img src ="\static\photos\GitHub.jpg" width = "80" height = "80">
+                <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
                 </a>
                 <a href="https://vk.com/jesusksu" >    
-                    <img src ="\static\photos\VK.jpg" width = "70" height = "70">
+                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
                 </a>
             </div>
         </div>
@@ -78,7 +78,7 @@
     <div class="col offset 3">
         <div class="card card-m p-4 shadow" id="cardThree">
             <div class="card-body">
-              <img src="\static\photos\Sofa.jpg" class="card-title pic">
+              <img src="\static\images\photos\Sofa.jpg" class="card-title pic">
                 <p class="card-text fontAb">
                     Приветствую! Меня зовут <strong>Кознюк София</strong>!  <br/>
                     Мною был реализован дизайн страницы "Об авторах"   <br/>
@@ -88,10 +88,10 @@
             </div>
             <div class="d-flex p-4 icon">
                 <a href="https://github.com/sofaackingsad" >
-                    <img src ="\static\photos\GitHub.jpg" width = "80" height = "80">
+                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
                 </a>
                 <a href="https://vk.com/gay2012" >    
-                    <img src ="\static\photos\VK.jpg" width = "70" height = "70">
+                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
                 </a>
             </div>
         </div>
@@ -100,7 +100,7 @@
     <div >
         <div class="card card-m p-4 shadow" id="cardFour">
             <div class="card-body">
-                 <img src="\static\photos\Misha.jpg" class="card-title pic">
+                 <img src="\static\images\photos\Misha.jpg" class="card-title pic">
                 <p class="card-text fontAb">
                     Огромный привет! Я <strong>Соколов Михаил</strong>!  <br/>
                     Моей главной задачей было придумать и разработать решение для задания  <br/>
@@ -110,10 +110,10 @@
             </div>
             <div class="d-flex p-4 icon">
                 <a href="https://github.com/hawk0f">
-                    <img src ="\static\photos\GitHub.jpg" width = "80" height = "80">
+                    <img src ="\static\images\photos\GitHub.jpg" width = "80" height = "80">
                 </a>
                 <a href="https://vk.com/hawk0f" >    
-                    <img src ="\static\photos\VK.jpg" width = "70" height = "70">
+                    <img src ="\static\images\photos\VK.jpg" width = "70" height = "70">
                 </a>
             </div>
         </div>

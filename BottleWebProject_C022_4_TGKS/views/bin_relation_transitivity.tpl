@@ -2,12 +2,12 @@
 
 
 <form method="post" action="/bin_relation_transitivity">
-    <label for="vertices">Количество вершин:</label>
+    <label for="vertices">Введите количество вершин:</label>
 <input type="number" name="vertices" id="vertices" min="1">
 
 <br><br>
 
-<label>Матрица смежности:</label>
+<label>Введите матрицу смежности:</label>
 <br>
 <table>
 <tbody id="matrix">

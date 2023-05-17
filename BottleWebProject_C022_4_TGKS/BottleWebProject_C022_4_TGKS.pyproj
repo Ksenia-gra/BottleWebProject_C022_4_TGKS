@@ -19,6 +19,7 @@
     <Name>BottleWebProject_C022_4_TGKS</Name>
     <RootNamespace>BottleWebProject_C022_4_TGKS</RootNamespace>
     <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +48,7 @@
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
-    <Folder Include="static\photos\" />
+    <Folder Include="static\images\photos\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -64,12 +65,12 @@
     <Content Include="static\images\index_card_bg.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\logo_with_title.png" />
-    <Content Include="static\photos\Alisa.png" />
-    <Content Include="static\photos\GitHub.jpg" />
-    <Content Include="static\photos\Ksenia.jpg" />
-    <Content Include="static\photos\Misha.jpg" />
-    <Content Include="static\photos\Sofa.png" />
-    <Content Include="static\photos\VK.jpg" />
+    <Content Include="static\images\photos\Alisa.png" />
+    <Content Include="static\images\photos\GitHub.jpg" />
+    <Content Include="static\images\photos\Ksenia.jpg" />
+    <Content Include="static\images\photos\Misha.jpg" />
+    <Content Include="static\images\photos\Sofa.png" />
+    <Content Include="static\images\photos\VK.jpg" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />
