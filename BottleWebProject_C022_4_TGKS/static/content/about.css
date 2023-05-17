@@ -1,16 +1,16 @@
-.index-card {
-    margin-block-start: 30px;
-    margin-block-end: 50px;
+.card-bg-m {
+	margin-block-start: 30px;
+    margin-block-end: 30px;
     border-radius: 10px;
     background-image: url("/static/images/index_card_bg.png");
     padding: 30px;
 }
 
+.card-m {
+    margin-block-start: 30px;
+}
+
 .theory-card {   
     padding: 20px;
     border-radius: 10px;
-}
-
-.func-card{
-    margin-block-start:30px;   
 }
