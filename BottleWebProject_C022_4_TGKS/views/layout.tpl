@@ -31,7 +31,7 @@
             <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
             <li><a class="dropdown-item" href="/bin_relation_transitivity" >Ассиметричность бинарного отношения</a></li>
             <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
-            <li><a class="dropdown-item" href="#" >Поиск Гамильтонова цикла</a></li>
+            <li><a class="dropdown-item" href="hamiltonian_cycle" >Поиск Гамильтонова цикла</a></li>
           </ul>
         </li>
         <li class="nav-item">
