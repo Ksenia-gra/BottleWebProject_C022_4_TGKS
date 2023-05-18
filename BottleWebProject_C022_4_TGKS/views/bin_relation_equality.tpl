@@ -1,4 +1,4 @@
-﻿% rebase('layout.tpl', title=title, year=year)
+% rebase('layout.tpl', title=title, year=year)
 
 <div class="card p-4 shadow border border-black">
     <h3 class="card-title">Определение эквивалентности бинарного отношения</h3>
