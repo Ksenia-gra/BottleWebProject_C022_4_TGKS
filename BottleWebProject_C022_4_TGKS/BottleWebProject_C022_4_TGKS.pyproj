@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C022_4_TGKS</Name>
     <RootNamespace>BottleWebProject_C022_4_TGKS</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env3|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -34,7 +34,7 @@
     <Compile Include="logic\antitransitivity_class.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="logic\test_form.py">
+    <Compile Include="logic\create_matrix_transitivity.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
@@ -100,6 +100,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env3\">
+      <Id>env3</Id>
+      <Version>3.9</Version>
+      <Description>env3 (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.11</Version>
