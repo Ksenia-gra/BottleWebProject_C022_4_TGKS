@@ -12,14 +12,14 @@
 </div>
 
 <div class="row mt-3">
-    <div class = "cards shadow">
+    <div class = "cards p-4 shadow rounded-5 border border-3 border-dark">
         <div class="card rounded-5 shadow" id="cardOne">
             <div class="card-body d-flex">
                 <div class="border-end border-3 border-dark me-5">
                     <img src="\static\images\photos\alisa.png" class="card-title me-5">
                 </div>
-                <div class="border-end border-3 align-items-center border-dark me-5">
-                    <p class="card-text fst-italic fs-5 me-3">
+                <div class="border-end border-3 d-flex align-items-center border-dark me-5">
+                    <p class="card-text fst-italic mt-auto mb-auto fs-5 me-3">
                         Привет! Меня зовут <strong>Туманова Алиса</strong>!
                         <br/>
                         Основной моей деятельностью в этом проекте являлась реализация страницы
@@ -54,14 +54,14 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards shadow">
+  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
                 <img src="\static\images\photos\ksenia.png" class="card-title me-5">
             </div>
-            <div class="border-end border-3  d-flex border-dark me-5 ">
-                <p class="card-text fst-italic fs-5 me-5">
+            <div class="border-end border-3 d-flex border-dark me-5 ">
+                <p class="card-text fst-italic mt-auto mb-auto fs-5 me-5">
                     Всем привет! Я <strong>Графова Ксения</strong>!
                     <br/>
                     В мои функциональные обязанности входило решение задачи об "Ассиметричности бинарного отношения", и помимо этого я продумала и реализовала дизайн главной страницы.
@@ -94,14 +94,14 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards shadow">
+  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
                 <img src="\static\images\photos\sofa.png" class="card-title me-5">
             </div>
             <div class="border-end border-3 d-flex border-dark me-5">
-                <p class="card-text fst-italic fs-5 me-5">
+                <p class="card-text fst-italic mt-auto mb-auto fs-5 me-5">
                     Приветствую! Меня зовут <strong>Кознюк София</strong>!
                     <br/>
                     Мною был реализован дизайн страницы "Об авторах" и придуман текст для описания моих коллег. Но, основной моей задачей было написать алгоритм для "Нахождения максимального потока в сети". 
@@ -134,14 +134,14 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards shadow">
+  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
                 <img src="\static\images\photos\misha.png" class="card-title me-5">
             </div>
-            <div class="border-end border-3  d-flex border-dark me-5">
-                <p class="card-text fst-italic fs-5 me-5">
+            <div class="border-end border-3 d-flex border-dark me-5">
+                <p class="card-text fst-italic mt-auto mb-auto fs-5 me-5">
                     Всем доброго времени суток! Я <strong>Соколов Михаил</strong>!
                     <br/>
                     Моей главной задачей было придумать и разработать решение для задания о "Гамильтоновых циклах". Я также не оставил без внимания страницу "Об авторах", и внес свой вклад в ее воплощение.
