@@ -35,13 +35,14 @@ def bin_relation_transitivity():
         vertices=0
     )
 
-@route('/hamiltonian')
+@route('/hamiltonian_cycle')
 @view('hamiltonian_cycle')
 def hamiltonian_cycle():
     """Renders the about page."""
     return dict(
-        title='Гамильтоновы циклы',
-        year=datetime.now().year
+        year=datetime.now().year,
+        matrix=[],
+        vertices=0
     )
 
 @route('/bin_relation_equality')
@@ -57,7 +58,7 @@ def bin_relation_equality():
 
 @route('/maximum_flow')
 @view('maximum_flow')
-def bin_relation_transitivity():
+def maximum_flow():
     """Renders the about page."""
     return dict(
         title='Максимальный поток',
