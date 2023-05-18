@@ -57,9 +57,11 @@ def bin_relation_equality():
 
 @route('/maximum_flow')
 @view('maximum_flow')
-def maximum_flow():
+def bin_relation_transitivity():
     """Renders the about page."""
     return dict(
-        title='Гамильтоновы циклы',
-        year=datetime.now().year
+        title='Максимальный поток',
+        year=datetime.now().year,
+        matrix=[],
+        vertices=0
     )
