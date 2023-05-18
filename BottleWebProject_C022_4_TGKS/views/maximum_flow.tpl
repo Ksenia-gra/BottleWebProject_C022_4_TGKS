@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title='Максимальный поток', year=year)
 
+
 <div class="card p-4 shadow-lg border border-dark bg-card-max">
 
 <div class="card-body">
@@ -26,69 +27,70 @@
 
 <div class="card shadow">
     <div class="card-body p-0 d-flex">
-        <div class="col p-5 pe-0" style="margin-right: -400px;">
-            <h3 class="card-title fs-3"><strong>Ввод данных</strong></h5>
+        <div class="col-5 p-4 pe-0 ps-0">
+            <h3 class="card-title ps-4 text-center fs-3"><strong>Ввод данных</strong></h5>
             <br>
-            <form method="post" action="/maximum_flow">
-                <label class="fs-5" for="vertices">Количество вершин:</label>
+            <form method="post" class="ps-4" action="/maximum_flow">
+                <label class="fs-5">Количество вершин:</label>
                 <br>
                 <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" id="button-addon1"><</button>
-                    <input style="text-align:center;" readonly type="text" size="5" min="0" max="10" placeholder="0" >
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" id="button-addon1">></button>
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(-1);removeOptions();" id="button-addon1"><</button>
+                    <input type="number" style="text-align:center;" readonly name="vertex" id="vertex" size="5" min="2" max="10" value="2" >
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(1);removeOptions();" id="button-addon1">></button>
                 </div>
                 <label class="fs-5">Вершина источника:</label>
-               <select class="form-select w-25" aria-label=".form-select-sm example" >
-               <option selected>Выберите..</option>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+
+               <select class="form-select" style="width:150px;" name="source" id="source" aria-label=".form-select-sm example" >
+                    <option selected="true" disabled="disabled">Выберите...</option>
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                    <option value ="6">6</option>
+                    <option value ="7">7</option>
+                    <option value ="8">8</option>
+                    <option value ="9">9</option>
+                    <option value ="10">10</option>
                 </select>
                 <br>
 
-                <label class="fs-5">Вершина стока:</label>
-                    <select class="form-select w-25" aria-label=".form-select-sm example" >
-                    <option selected>Выберите..</option>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                <label class="fs-5" style="text-align-center">Вершина стока:</label>
+
+                    <select class="form-select" id="stock" name="stock" style="width:150px;" aria-label=".form-select-sm example" >
+                    <option selected="true" disabled="disabled">Выберите...</option>
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value ="3">3</option>
+                    <option value ="4">4</option>
+                    <option value ="5">5</option>
+                    <option value ="6">6</option>
+                    <option value ="7">7</option>
+                    <option value ="8">8</option>
+                    <option value ="9">9</option>
+                    <option value ="10">10</option>
                 </select>
-               
             </form>
              <br>
 
             <form method="post" action="/maximum_flow">
-                <label class="fs-5">Пропускные способности дуг:</label>
-                <div class="border-bottom border border-dark" style="margin-right: 400px;"></div>
+                <label class="fs-5 ps-4">Заполнение пропускных способностей дуг:</label>
+               
                 <br>
-                <table>
+                <table class="ps-4">
                     <tbody id="matrix"></tbody>
                 </table>
                 <br>
-                <a class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button" data-bs-toggle="button">Матрица</a>
-                <a class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button" data-bs-toggle="button">Граф</a>
+                 <div class="border-top text-center border-dark border-3  pt-3">
+                    <a class="fs-6 ms-4 btn btn-light text-dark" style="border: groove; width:100px;" role="button" data-bs-toggle="button">Матрица</a>
+                    <a class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button" data-bs-toggle="button">Граф</a>           
+                 </div>
             </form>
         </div>
 
         <div class="border-end border border-dark"></div>
 
-        <div class="col p-5">
+        <div class="col p-4">
         <h3 class="card-title fs-3" style="text-align:center;"><strong>Результат решения</strong></h5>
             <table class="table">
                 <thead>
@@ -111,6 +113,6 @@
         </div>
 </div>
 </div>
+<script src="/static/scripts/local_scripts/max_value.js">
 
-
-
+</script>
