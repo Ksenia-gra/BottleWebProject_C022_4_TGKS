@@ -14,7 +14,7 @@
             <label for="vertices" >¬ведите количество вершин:</label>
             <br><br>
             <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">Ц</button>
-            <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz ">
+            <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz">
             <button type="button"  class="button p-1 bg-black" onclick="changeValue(1)">+</button>
             <br><br>
 
@@ -50,6 +50,7 @@
                 </tbody>
             </table>
         </div>
+        <div class="alert alert-secondary d-flex align-items-center" role="alert"></div>
     </div>
 </div>
 
@@ -91,7 +92,7 @@
                 td.appendChild(input);
                 tr.appendChild(td);
             }
-        tbody.appendChild(tr);
+            tbody.appendChild(tr);
         }
     }
 
