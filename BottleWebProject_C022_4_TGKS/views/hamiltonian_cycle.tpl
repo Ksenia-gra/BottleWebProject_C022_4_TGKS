@@ -64,16 +64,17 @@
 				<form method="post" id="form" action="/hamiltonian_cycle" novalidate>
 					<label for="vertices" class="fs-5 form-label">Введите количество вершин:</label>
 					
-					<input type="text" name="vertices" class="form-control" id="vertices" min="0" max="10" value="0">
+					<input type="text" name="vertices" class="form-control" id="vertices" min="0" max="10" value="">
 					<div class="invalid-feedback">
 				    	Введите число вершин от 2 до 10
 				    </div>
 
 					</br>
 					
-					<label id="fillMatrix" class="fs-5 d-none">Заполните матрицу смежности:</label>
+					<h3 id="fillMatrix" class="fs-4 fw-normal d-none mb-2 text-center">Заполните матрицу смежности</h3>
 					
-					<table>
+					<table id="matrixTable" class="table-sm d-none table text-center table-borderless">
+						<caption id="matrixCaption" class="text-center">0 при отсутствии связи, 1 при наличии связи</caption>
 						<tbody id="matrix"></tbody>
 					</table>		
 						
@@ -89,12 +90,12 @@
 		<div class="card p-4 shadow" id="cardTwo">
 			<div class="card-body">
 				<h3 class="card-header text-center pt-0 mb-2"><strong>Решение</strong></h3>
-				<table class="table">
+				<table class="table table-bordered table-sm" id="filledMatrix">
 				  	<tbody>
 				        % for row in matrix:
 				        <tr>
 				      	  	% for cell in row:
-				        	<td>{{cell}}</td>
+				        	<td class="text-center">{{cell}}</td>
 				        	% end
 				        </tr>
 						% end
@@ -107,7 +108,8 @@
 </div>
 
 <script>	
-	$("#vertices").on('change keyup paste', function() {
+	$("#vertices").on('change keyup paste', function() 
+	{
 		txt = $(this).val()
 		num = Number(txt)
 
@@ -115,19 +117,22 @@
 		{
 			$(this).addClass('is-invalid')
 			$("#fillMatrix").addClass('d-none')
+			$("#filledMatrix").addClass('d-none')
+			$("#matrixCaption").addClass('d-none')
+			$("#matrixTable").addClass('d-none')
 			$("#matrix").addClass('d-none')
 			$("input[type=submit]").attr("disabled", "disabled")
 		}
 		else 
 		{
 			$(this).removeClass('is-invalid')
-			$("#fillMatrix").removeClass('d-none')	
+			$("#fillMatrix").removeClass('d-none')
+			$("#filledMatrix").addClass('d-none')
+			$("#matrixCaption").removeClass('d-none')
+			$("#matrixTable").removeClass('d-none')	
 			$("#matrix").removeClass('d-none')
 			$("input[type=submit]").removeAttr("disabled")
-			if (txt != '')
-			{
-				changeValue(num)
-			}
+			changeVerticesNum(num)
 		}
 	});
 
