@@ -30,11 +30,22 @@ def bin_relation_transitivity():
     """Renders the about page."""
     return dict(
         title='Антитранзитивность бинарного отношения',
-        year=datetime.now().year
+        year=datetime.now().year,
+        matrix=[],
+        vertices=0
     )
 
 @route('/hamiltonian')
 @view('hamiltonian_cycle')
+def bin_relation_transitivity():
+    """Renders the about page."""
+    return dict(
+        title='Гамильтоновы циклы',
+        year=datetime.now().year
+    )
+
+@route('/maximum_flow')
+@view('maximum_flow')
 def bin_relation_transitivity():
     """Renders the about page."""
     return dict(

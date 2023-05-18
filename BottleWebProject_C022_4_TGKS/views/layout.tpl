@@ -8,6 +8,8 @@
     <link href="/static/content/site.css" rel="stylesheet">
     <link href="/static/content/layout.css" rel="stylesheet">
     <link href="/static/content/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/content/about.css">
+    <link href="/static/content/bin_relation_transitivity.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
@@ -31,11 +33,11 @@
             <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
             <li><a class="dropdown-item" href="/bin_relation_transitivity" >Ассиметричность бинарного отношения</a></li>
             <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
-            <li><a class="dropdown-item" href="/hamiltonian" >Поиск Гамильтонова цикла</a></li>
+            <li><a class="dropdown-item" href="/hamiltonian" >Поиск Гамильтоновых циклов</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active"  aria-current="page"  href="/about">Об авторах</a>
+          <a class="nav-link active" aria-current="page" href="/about">Об авторах</a>
         </li>
       </ul>
       

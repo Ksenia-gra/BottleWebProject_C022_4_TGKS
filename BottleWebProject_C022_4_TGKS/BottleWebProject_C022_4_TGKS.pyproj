@@ -18,7 +18,8 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C022_4_TGKS</Name>
     <RootNamespace>BottleWebProject_C022_4_TGKS</RootNamespace>
-    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,9 @@
     <Compile Include="logic\antitransitivity_class.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="logic\test_form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
     <Compile Include="logic\TumFunctions.py">
       <SubType>Code</SubType>
@@ -44,11 +48,16 @@
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
+    <Folder Include="static\images\photos\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\content\about.css" />
+    <Content Include="static\content\bin_relation_transitivity.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\content\index.css" />
     <Content Include="static\content\layout.css" />
     <Content Include="static\content\site.css" />
@@ -60,6 +69,14 @@
     <Content Include="static\images\index_card_bg.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\logo_with_title.png" />
+    <Content Include="static\images\photos\Alisa.png" />
+    <Content Include="static\images\photos\bg_card.jpg" />
+    <Content Include="static\images\photos\GitHub.jpg" />
+    <Content Include="static\images\photos\Ksenia.jpg" />
+    <Content Include="static\images\photos\Misha.jpg" />
+    <Content Include="static\images\photos\Sofa.png" />
+    <Content Include="static\images\photos\VK.jpg" />
+    <Content Include="static\images\transit_card.png" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />
@@ -78,17 +95,11 @@
     <Content Include="views\hamiltonian_cycle.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\maximum_flow.tpl">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env1\">
-      <Id>env1</Id>
-      <Version>3.9</Version>
-      <Description>env1 (Python 3.9 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.11</Version>
