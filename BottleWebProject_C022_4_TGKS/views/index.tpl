@@ -65,7 +65,7 @@
                 </p>
             </div>
             <div class="d-flex p-4">
-                <a href="#" class="btn btn-dark">Перейти к задаче ></a>
+                <a href="/bin_relation_equality" class="btn btn-dark">Перейти к задаче ></a>
                 </div>
         </div>
     </div>
