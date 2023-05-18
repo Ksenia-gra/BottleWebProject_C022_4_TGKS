@@ -1,6 +1,6 @@
 % rebase('layout.tpl', title=title, year=year)
 
-<div class="card p-4  shadow border border-black">
+<div class="card p-4 mt-2 shadow border border-black">
     <h3 class="card-title">Определение эквивалентности бинарного отношения</h3>
     <h3 class="card-title">Нахождение дополнительного бинарного отношения</h3>
     <div class="card-body">
@@ -10,7 +10,7 @@
         </div>
         <h3 class="card-title text-center"><strong>Решение задачи</strong></h3>
     
-        <form method="post" action="/bin_relation_transitivity" class="text-center">
+        <form method="post" action="/bin_relation_equality" class="text-center">
             <label for="vertices" >Введите количество вершин:</label>
             <br><br>
             <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">–</button>
