@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="static\content\about.css" />
     <Content Include="static\content\bin_relation_transitivity.css">
       <SubType>Code</SubType>
     </Content>
@@ -69,6 +70,7 @@
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\logo_with_title.png" />
     <Content Include="static\images\photos\Alisa.png" />
+    <Content Include="static\images\photos\bg_card.jpg" />
     <Content Include="static\images\photos\GitHub.jpg" />
     <Content Include="static\images\photos\Ksenia.jpg" />
     <Content Include="static\images\photos\Misha.jpg" />
