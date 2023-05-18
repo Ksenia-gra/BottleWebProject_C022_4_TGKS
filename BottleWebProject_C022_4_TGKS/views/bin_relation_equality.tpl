@@ -1,30 +1,30 @@
-% rebase('layout.tpl', title=title, year=year)
+п»ї% rebase('layout.tpl', title=title, year=year)
 
 <div class="card p-4 shadow border border-black">
-    <h3 class="card-title text-light">Определение эквивалентности бинарного отношения</h3>
-    <h3 class="card-title text-light">Нахождение дополнительного бинарного отношения</h3>
+    <h3 class="card-title">РћРїСЂРµРґРµР»РµРЅРёРµ СЌРєРІРёРІР°Р»РµРЅС‚РЅРѕСЃС‚Рё Р±РёРЅР°СЂРЅРѕРіРѕ РѕС‚РЅРѕС€РµРЅРёСЏ</h3>
+    <h3 class="card-title">РќР°С…РѕР¶РґРµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ Р±РёРЅР°СЂРЅРѕРіРѕ РѕС‚РЅРѕС€РµРЅРёСЏ</h3>
     <div class="card-body">
         <div class="alert alert-secondary d-flex align-items-center" role="alert">
             <i class="fa fa-info-circle fs-1 me-3" aria-hidden="true"></i>
-                Сначала выберите количество вершин, потом в появившиеся поля вводите значения матрицы смежности графа
+                РЎРЅР°С‡Р°Р»Р° РІС‹Р±РµСЂРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ, РїРѕС‚РѕРј РІ РїРѕСЏРІРёРІС€РёРµСЃСЏ РїРѕР»СЏ РІРІРѕРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РјР°С‚СЂРёС†С‹ СЃРјРµР¶РЅРѕСЃС‚Рё РіСЂР°С„Р°
         </div>
-        <h3 class="card-title text-center"><strong>Решение задачи</strong></h3>
+        <h3 class="card-title text-center"><strong>Р РµС€РµРЅРёРµ Р·Р°РґР°С‡Рё</strong></h3>
     
         <form method="post" action="/bin_relation_transitivity" class="text-center">
-            <label for="vertices" >Введите количество вершин:</label>
+            <label for="vertices" >Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅ:</label>
             <br><br>
-            <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">–</button>
+            <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">вЂ“</button>
             <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz">
             <button type="button"  class="button p-1 bg-black" onclick="changeValue(1)">+</button>
             <br><br>
 
-            <label>Введите матрицу смежности:</label>
+            <label>Р’РІРµРґРёС‚Рµ РјР°С‚СЂРёС†Сѓ СЃРјРµР¶РЅРѕСЃС‚Рё:</label>
             <br>
             <table class="centerTable">
                 <tbody id="matrix"></tbody>
             </table>
             <br>
-            <input type="submit" class="btn btn-outline-dark mt-1" value="Решить задачу">
+            <input type="submit" class="btn btn-outline-dark mt-1" value="Р РµС€РёС‚СЊ Р·Р°РґР°С‡Сѓ">
         </form>
         <div class="d-flex justify-content-center">
             <table class="table table-bordered text-center mt-3">
