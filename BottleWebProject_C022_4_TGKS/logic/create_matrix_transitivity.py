@@ -2,6 +2,7 @@ from bottle import route, request, template,view,datetime
 
 @route('/bin_relation_transitivity', method='POST')
 def submit():
+    postdata = request.body.read()
     num_vertices = int(request.forms.get('vertices'))
     matrix = []
     for i in range(num_vertices):

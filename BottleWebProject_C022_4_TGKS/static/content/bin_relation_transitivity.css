@@ -13,7 +13,7 @@
     border-color:transparent;
     color:white;
     width:100px;
-    font-size:22px;
+    font-size:30px;
     font-weight:700;
 }
 .title-card {
@@ -22,4 +22,29 @@
     border-radius: 10px;
     background-image: url("/static/images/transit_card.png");
     padding: 30px;
+}
+.centerTable {
+    margin: 0px auto;
+}
+
+.form-check-input:checked {
+    background-color: black;
+    border-color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: lightgray;
+    color: black;
+}
+
+.nav-link{
+    color: black;
+    background: white;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: black;
+}
+.nav-btn{
+    color:white;
 }
