@@ -1,56 +1,55 @@
 % rebase('layout.tpl', title='Отношение эквивалентности', year=year)
 
-<div class="card p-4 shadow-lg border border-dark title-card">
-
+<div class="card p-4 shadow border border-black">
+    <h3 class="card-title text-light">Определение эквивалентности бинарного отношения</h3>
+    <h3 class="card-title text-light">Нахождение дополнительного бинарного отношения</h3>
     <div class="card-body">
-
-        <h3 class="card-title text-light">Определение эквивалентности бинарного отношения</h3>
-        <h3 class="card-title text-light">Нахождение дополнительного бинарного отношения</h3>
-        <br>
+        <div class="alert alert-secondary d-flex align-items-center" role="alert">
+            <i class="fa fa-info-circle fs-1 me-3" aria-hidden="true"></i>
+                Сначала выберите количество вершин, потом в появившиеся поля вводите значения матрицы смежности графа
         </div>
-    </div>
-</div>
-<div class="card p-4 shadow">
-    <div class="card-body">
-        <h3 class="card-text"><strong>Решение задачи</strong></h3>
-
-        <form method="post" action="/bin_relation_transitivity">
-            <label for="vertices">Введите количество вершин:</label>
+        <h3 class="card-title text-center"><strong>Решение задачи</strong></h3>
+    
+        <form method="post" action="/bin_relation_transitivity" class="text-center">
+            <label for="vertices" >Введите количество вершин:</label>
             <br><br>
-
-            <button type="button" class="button p-2 bg-black" onclick="changeValue(-1)">–</button>
-            <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz">
-            <button type="button"  class="button p-2 bg-black" onclick="changeValue(1)">+</button>
+            <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">–</button>
+            <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz ">
+            <button type="button"  class="button p-1 bg-black" onclick="changeValue(1)">+</button>
             <br><br>
 
             <label>Введите матрицу смежности:</label>
-                <br>
-                    <table>
-                        <tbody id="matrix"></tbody>
-                    </table>
-                <br>
-                    <input type="submit" value="Отправить">
+            <br>
+            <table class="centerTable">
+                <tbody id="matrix"></tbody>
+            </table>
+            <br>
+            <input type="submit" class="btn btn-outline-dark mt-1" value="Решить задачу">
         </form>
-        <table class="table table-bordered center">
-            <thead>
-                <tr>
-                    % for i in range(len(matrix)):
-                        <th>{{i+1}}</th>
-                    % end
-                </tr>
-            </thead>
-            <tbody>
-                % for row in matrix:
+        <div class="d-flex justify-content-center">
+            <table class="table table-bordered text-center mt-3">
+                <thead>
                     <tr>
-                        % for cell in row:
-                    <td>{{cell}}</td>
+                        <th class="text-white">#</th>
+                        % for i in range(len(matrix)):
+                            <th>{{i+1}}</th>
                         % end
                     </tr>
-                % end
-            </tbody>
-        </table>
-        <h3 class="card-text" id="result"><strong></strong></h3>
-        <h5 class="card-text"></h5>
+                </thead>
+                <tbody>
+                    % i = 0
+                    % for row in matrix:
+                        <tr>
+                            <th scope="row">{{i+1}}</th>
+                            % for cell in row:
+                                <td>{{cell}}</td>
+                            % end
+                        </tr>
+                        % i += 1
+                    % end
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -82,15 +81,27 @@
             for (var j = 0; j < numVertices; j++) {
                 var td = document.createElement("td");
                 var input = document.createElement("input");
-                input.type = "number";
-                input.name = "matrix[" + i + "][" + j + "]";
-                input.style.width='50px';
+                $(input).addClass('form-check-input')
                 $(input).val(1);
-                $(input).add
+                input.name = "matrix[" + i + "][" + j + "]";
+                input.type = "checkbox";
+                input.style.width='50px';
+                input.style.height='50px';
+
                 td.appendChild(input);
                 tr.appendChild(td);
             }
         tbody.appendChild(tr);
         }
     }
+
+    $(document).ready(function(){
+        createMatrix(2)
+    });
+
+    $(document).ready(function(){
+        $('#matrix input').on('change keyup paste',function(){
+            console.log($(this).val(1));
+        })
+    });
 </script>

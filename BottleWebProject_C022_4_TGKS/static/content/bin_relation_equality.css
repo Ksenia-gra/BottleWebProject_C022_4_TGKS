@@ -22,6 +22,14 @@
     margin-block-start: 30px;
     margin-block-end: 50px;
     border-radius: 10px;
-    background-image: url("/static/images/transit_card.png");
     padding: 30px;
+}
+
+.centerTable {
+    margin: 0px auto;
+}
+
+.form-check-input:checked {
+    background-color: black;
+    border-color: black;
 }
