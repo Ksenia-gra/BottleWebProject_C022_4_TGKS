@@ -4,8 +4,7 @@
 
 <div class="card-body">
 
-<h4 class="card-title text-light">Определение ассиметричности и антитранзитивности бинарного отношения</h4>
-<h4 class="card-title text-light">Нахождение обратного бинарного отношения</h4>
+<h4 class="card-title text-light">Ассиметричность и антитранзитивность.Нахождение обратного отношения</h4>
 <br>
        
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -31,7 +30,7 @@
 </div>
 </div>
 
-<div class="card p-4 shadow border border-black">
+<div class="card p-4 shadow border border-black" >
 <div class="card-body">
 <div class="alert alert-secondary d-flex align-items-center text-center" role="alert">
 <i class="fa fa-info-circle fs-1 me-3" aria-hidden="true"></i>
@@ -44,9 +43,9 @@
     <label for="vertices" >Введите количество вершин:</label>
     <br><br>
 
-<button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">–</button>
+<button type="button" class="button p-1 bg-black text-center" onclick="changeValue(-1)">–</button>
 <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz ">
-<button type="button"  class="button p-1 bg-black" onclick="changeValue(1)">+</button>
+<button type="button"  class="button p-1 bg-black text-center" onclick="changeValue(1)">+</button>
 <br><br>
 
 <label>Введите матрицу смежности:</label>
@@ -56,11 +55,12 @@
 </tbody>
 </table>
 <br>
-<input type="submit" class="btn btn-outline-dark mt-1" value="Вывести матрицу">
-<input type="submit" class="btn btn-outline-dark mt-1" value="Проверить ассиметричность">
-<input type="submit" class="btn btn-outline-dark mt-1" value="Проверить антитранзитивность">
-<input type="submit" class="btn btn-outline-dark mt-1" value="Найти обратную матрицу">
+<input type="submit" class="btn btn-outline-dark mt-1" name="printMatr" value="Вывести матрицу">
+<input type="submit" class="btn btn-outline-dark mt-1" name="checkAssim" value="Проверить ассиметричность">
+<input type="submit" class="btn btn-outline-dark mt-1" name="checkAntit" value="Проверить антитранзитивность">
+<input type="submit" class="btn btn-outline-dark mt-1" name="getReverse" value="Найти обратную матрицу">
 </form>
+
 <div class="d-flex justify-content-center">
 <table class="table table-bordered text-center mt-3">
     <thead>
@@ -78,7 +78,7 @@
    
         % i = 0
         % for row in matrix:
-        <tr>
+        <tr> 
         
             <th scope="row">{{i+1}}</th>
       
@@ -92,8 +92,40 @@
 % end
 </tbody>
 </table>
-
 </div>
+<div class="d-flex justify-content-center">
+<table class="table table-bordered text-center mt-3">
+    <thead>
+   
+    <tr>
+
+     <th class="text-white">#</th>
+
+      % for i in range(len(rev_matrix)):
+      <th>{{i+1}}</th>
+       % end
+    </tr>
+  </thead>
+    <tbody>
+   
+        % i = 0
+        % for row in rev_matrix:
+        <tr> 
+        
+            <th scope="row">{{i+1}}</th>
+      
+            % for cell in row:
+            
+        <td>{{cell}}</td>
+            % end
+
+        </tr>
+       %i += 1
+% end
+</tbody>
+</table>
+</div>
+
 </div>
 </div>
 <script src="/static/scripts/local_scripts/bin_rel_transitivity.js">

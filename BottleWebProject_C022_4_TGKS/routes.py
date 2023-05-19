@@ -32,7 +32,10 @@ def bin_relation_transitivity():
         title='Антитранзитивность бинарного отношения',
         year=datetime.now().year,
         matrix=[],
-        vertices=0
+        vertices=0,
+        str_assim='',
+        str_antit='',
+        rev_matrix=[]
     )
 
 @route('/hamiltonian')
@@ -52,8 +55,9 @@ def bin_relation_equality():
         title='Отношение эквивалентности',
         year=datetime.now().year,
         matrix=[],
-        vertices=0
-    )
+        vertices=0,
+       
+    ) 
 
 @route('/maximum_flow')
 @view('maximum_flow')
