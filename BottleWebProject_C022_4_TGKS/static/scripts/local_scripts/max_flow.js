@@ -6,12 +6,11 @@ function changeValue(change) {
     var num = parseInt(inputVertex.value);
     // Вычисляем новое значение
     var newValue = num + change;
-    // Проверяем, что новое значение находится в допустимом диапазоне (min, max)
-    if (newValue >= parseInt(inputVertex.min) && newValue <= parseInt(inputVertex.max)) {
-        // cоздаем новую матрицу
-        inputVertex.value = newValue;
 
-    }
+    // cоздаем новую матрицу
+    inputVertex.value = newValue;
+    document.getElementById("matrix").innerHTML = "";
+    generateMatrix(newValue);
 }
 
 // Обработчик события изменения списка 
@@ -26,6 +25,7 @@ function removeOptions() {
     //Создаем элемент списка
     var optionSource = document.createElement("option");
     var optionStock = document.createElement("option");
+    
     //Циклом проходимся по списку источника
     for (var i = selectSource.options.length - 1; i >= 0; i--) {
         //Получаем элементы списка источника
@@ -65,4 +65,22 @@ function removeOptions() {
     }
 }
 
-
+//Создание матрицы
+function generateMatrix(countVertices) {
+    const table = document.getElementById("matrix");
+    const tbl = document.createElement('table');
+    for (let i = 0; i < countVertices; i++) {
+        const tr = tbl.insertRow();
+        for (let j = 0; j < countVertices; j++) {
+            const input = document.createElement("input");
+            const td = document.createElement("td");
+            input.name = "matrix[" + i + "][" + j + "]";
+            input.style.width = '45px';
+            input.style.height = '40px';
+            td.style.border = '1px solid black';
+            td.appendChild(input);
+            tr.appendChild(td);
+        }
+    }
+    table.appendChild(tbl);
+}

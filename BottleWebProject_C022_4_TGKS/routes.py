@@ -64,5 +64,5 @@ def maximum_flow():
         title='Максимальный поток',
         year=datetime.now().year,
         matrix=[],
-        vertices=0
+        vertex=0
     )
