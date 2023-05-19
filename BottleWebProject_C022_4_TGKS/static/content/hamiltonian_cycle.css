@@ -1,0 +1,7 @@
+.title-card-ham {
+    margin-block-start: 30px;
+    margin-block-end: 50px;
+    border-radius: 10px;
+    background-image: url("/static/images/hamiltonian_cycle_bg.png");
+    padding: 30px;
+}

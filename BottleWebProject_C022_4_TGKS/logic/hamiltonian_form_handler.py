@@ -1,6 +1,6 @@
-from bottle import route, request, template, view, datetime
+from bottle import route, request, template, datetime
 
-@route('/bin_relation_equality', method='POST')
+@route('/hamiltonian_cycle', method='POST')
 def submit():
     num_vertices = int(request.forms.get('vertices'))
     matrix = []
@@ -10,6 +10,4 @@ def submit():
             cell = request.forms.get('matrix[{}][{}]'.format(i, j))
             row.append(int(cell) if cell else 0)
         matrix.append(row)
-
-    #��������� ��������� ������� ���������
-    return template('bin_relation_equality', matrix=matrix,year=datetime.now().year)
+    return template('hamiltonian_cycle', matrix=matrix, year=datetime.now().year)
