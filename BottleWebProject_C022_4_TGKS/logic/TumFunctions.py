@@ -1,17 +1,17 @@
 import random
 
 @post('/bin_relation_equality', method='relations')
-def Matrix():
-
-    n = 0
+def Matrix(num_vert, matrixD):
+    
     matrix = [[0] * n for i in range(n)]
-    for i in matrix:
-        for i2 in i:
-            matrix[i][i2] = random.randint(0, 1)
-
+    matrix = matrixD
+    n = 0
     a = 0
     res = ""
     matrixDop = [[0] * n for i in range(n)]
+    #for i in matrix:
+    #    for i2 in i:
+    #        matrix[i][i2] = random.randint(0, 1)
 
     for i in range(n):
         for i2 in range(n):
@@ -33,4 +33,4 @@ def Matrix():
                     matrixDop[i][i2] = 0
                 else: matrixDop[i][i2] = 1
 
-    return template('index.tpl', result = res)
+    return template('bin_relation_equality', matrix = matrixD, result = res, dopMatrix = matrixDop, year=datetime.now().year)

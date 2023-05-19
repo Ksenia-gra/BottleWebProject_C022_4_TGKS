@@ -26,6 +26,7 @@
             <br>
             <input type="submit" class="btn btn-outline-dark mt-1" value="Решить задачу">
         </form>
+
         <div class="d-flex justify-content-center">
             <table class="table table-bordered text-center mt-3">
                 <thead>
@@ -50,7 +51,33 @@
                 </tbody>
             </table>
         </div>
+
         <div class="alert alert-secondary d-flex align-items-center" role="alert"></div>
+
+        <div class="d-flex justify-content-center">
+            <table class="table table-bordered text-center mt-3">
+                <thead>
+                    <tr>
+                        <th class="text-white">#</th>
+                        % for i in range(len(dopMatrix)):
+                            <th>{{i+1}}</th>
+                        % end
+                    </tr>
+                </thead>
+                <tbody>
+                    % i = 0
+                    % for row in dopMatrix:
+                        <tr>
+                            <th scope="row">{{i+1}}</th>
+                            % for cell in row:
+                                <td>{{cell}}</td>
+                            % end
+                        </tr>
+                        % i += 1
+                    % end
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

@@ -56,7 +56,9 @@ def bin_relation_equality():
         title = 'Отношение эквивалентности',
         year = datetime.now().year,
         matrix = [],
-        verticesT = 0
+        verticesT = 0,
+        res = '',
+        dopMatrix = []
     )
 
 @route('/maximum_flow')
