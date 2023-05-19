@@ -11,10 +11,10 @@
         <h3 class="card-title text-center"><strong>Решение задачи</strong></h3>
     
         <form method="post" action="/bin_relation_equality" class="text-center">
-            <label for="vertices" >Введите количество вершин:</label>
+            <label for="verticesT" >Введите количество вершин:</label>
             <br><br>
             <button type="button" class="button p-1 bg-black" onclick="changeValue(-1)">–</button>
-            <input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz">
+            <input type="number" name="verticesT" id="verticesT" min="2" max="10" value="2" readonly class="raz">
             <button type="button"  class="button p-1 bg-black" onclick="changeValue(1)">+</button>
             <br><br>
 

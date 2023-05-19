@@ -49,10 +49,10 @@ def hamiltonian_cycle():
 def bin_relation_equality():
     """Renders the about page."""
     return dict(
-        title='Отношение эквивалентности',
-        year=datetime.now().year,
-        matrix=[],
-        vertices=0
+        title = 'Отношение эквивалентности',
+        year = datetime.now().year,
+        matrix = [],
+        verticesT = 0
     )
 
 @route('/maximum_flow')
