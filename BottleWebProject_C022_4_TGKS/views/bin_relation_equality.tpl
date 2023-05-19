@@ -52,7 +52,7 @@
             </table>
         </div>
 
-        <div class="alert alert-secondary d-flex align-items-center" role="alert"></div>
+        <div class="alert alert-secondary d-flex align-items-center" role="alert">{{res}}</div>
 
         <div class="d-flex justify-content-center">
             <table class="table table-bordered text-center mt-3">
