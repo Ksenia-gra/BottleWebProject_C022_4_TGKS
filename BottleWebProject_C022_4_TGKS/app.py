@@ -11,6 +11,8 @@ import routes
 
 import logic.create_matrix_transitivity
 import logic.matrix_equality
+import logic.hamiltonian_form_handler
+import logic.max_flow_handler
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.

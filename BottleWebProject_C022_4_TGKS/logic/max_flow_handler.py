@@ -1,5 +1,5 @@
 from bottle import route, request, template,datetime
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 @route('/maximum_flow', method='POST')
 def submit():
@@ -14,5 +14,5 @@ def submit():
     
     return template('maximum_flow', matrix=matrix,year=datetime.now().year)
 
-#def graph():
-  # plt.show()
+def graph():
+    plt.show()

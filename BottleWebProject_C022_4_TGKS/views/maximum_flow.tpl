@@ -34,9 +34,9 @@
                 <label class="fs-5">Количество вершин:</label>
                 <br>
                 <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(-1);removeOptions();" id="button-addon1"><</button>
-                    <input onchange="matrixCreate()" type="number" style="text-align:center;" readonly name="vertex" id="vertex" size="5" min="2" max="10" value="2" >
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(1);removeOptions();" id="button-addon1">></button>
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(-1, source[source.selectedIndex].value, stock[stock.seelectedIndex].value);removeOptions();" id="button-addon1"><</button>
+                    <input type="number" style="display: grid; justify-content: center;" readonly name="vertex" id="vertex" size="5" min="2" max="10" value="2" >
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(1, source[source.selectedIndex].value, stock[stock.selectedIndex].value);removeOptions();" id="button-addon1">></button>
                 </div>
                 <label class="fs-5">Вершина источника:</label>
 
@@ -68,8 +68,7 @@
                     </div>
                 <br>
                  <div class="border-top text-center border-dark border-3  pt-3">
-                   <a type="submit" class="fs-6 ms-4 btn btn-light text-dark" style="border: groove; width:100px;" role="button">Матрица</a>
-                    <a type ="graph" class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button">Граф</a>           
+                     <a type ="graph" class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button">Граф</a>           
                  </div>
             </form>
         </div>
@@ -99,6 +98,4 @@
         </div>
 </div>
 </div>
-<script src="/static/scripts/local_scripts/max_value.js">
-
-</script>
+<script src="/static/scripts/local_scripts/max_flow.js"></script>

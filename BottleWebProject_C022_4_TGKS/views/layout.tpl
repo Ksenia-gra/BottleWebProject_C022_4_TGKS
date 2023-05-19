@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/static/content/hamiltonian_cycle.css">
     <link href="/static/content/bin_relation_transitivity.css" rel="stylesheet">
     <script src="/static/scripts/local_scripts/validation_hamiltonian.js"></script>
-    <script src="/static/scripts/local_scripts/max_flow.js"></script>
     <link rel="stylesheet" href="/static/content/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
