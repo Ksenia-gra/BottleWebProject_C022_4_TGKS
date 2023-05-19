@@ -32,16 +32,20 @@ def bin_relation_transitivity():
         title='Антитранзитивность бинарного отношения',
         year=datetime.now().year,
         matrix=[],
-        vertices=0
+        vertices=0,
+        str_assim='',
+        str_antit='',
+        rev_matrix=[]
     )
 
-@route('/hamiltonian')
+@route('/hamiltonian_cycle')
 @view('hamiltonian_cycle')
 def hamiltonian_cycle():
     """Renders the about page."""
     return dict(
-        title='Гамильтоновы циклы',
-        year=datetime.now().year
+        year=datetime.now().year,
+        matrix=[],
+        vertices=0
     )
 
 @route('/bin_relation_equality')
@@ -60,6 +64,8 @@ def bin_relation_equality():
 def maximum_flow():
     """Renders the about page."""
     return dict(
-        title='Гамильтоновы циклы',
-        year=datetime.now().year
+        title='Максимальный поток',
+        year=datetime.now().year,
+        matrix=[],
+        vertex=0
     )

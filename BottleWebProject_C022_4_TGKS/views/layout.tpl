@@ -9,8 +9,11 @@
     <link href="/static/content/layout.css" rel="stylesheet">
     <link href="/static/content/index.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/content/about.css">
+    <link rel="stylesheet" href="/static/content/max_flow.css">
+    <link rel="stylesheet" href="/static/content/hamiltonian_cycle.css">
     <link href="/static/content/bin_relation_transitivity.css" rel="stylesheet">
-    <link href="/static/content/font-awesome.min.css" rel="stylesheet">
+    <script src="/static/scripts/local_scripts/validation_hamiltonian.js"></script>
+    <script src="/static/scripts/local_scripts/max_flow.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
@@ -31,10 +34,10 @@
             Решение задач
           </a>
           <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/bin_relation_equality" >Отношение эквивалентности</a></li>
+            <li><a class="dropdown-item" href="#" >Отношение эквивалентности</a></li>
             <li><a class="dropdown-item" href="/bin_relation_transitivity" >Ассиметричность бинарного отношения</a></li>
-            <li><a class="dropdown-item" href="#" >Максимальный поток в сети</a></li>
-            <li><a class="dropdown-item" href="/hamiltonian" >Поиск Гамильтоновых циклов</a></li>
+            <li><a class="dropdown-item" href="/maximum_flow" >Максимальный поток в сети</a></li>
+            <li><a class="dropdown-item" href="/hamiltonian_cycle">Поиск Гамильтоновых циклов</a></li>
           </ul>
         </li>
         <li class="nav-item">

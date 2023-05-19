@@ -1,18 +1,16 @@
 % rebase('layout.tpl', title=title, year=year)
 
 <div class="row">
-    <div class="col-8 offset-2 text-center mb-3">
+    <div class="col-8 offset-2 mb-3">
         <h3 class ="text-center fs-1 mt-3">Наша команда</h3>
-        <p class="card-text fs-5">
-            Во время прохождения учебной практики в ФСПО ГУАП преподавателями Опалевой У.С. и Бартасевич И.Г. были составлены команды для выполнения различных заданий и интеграций программных модулей, пользуясь системой контроля версий. 
-            <br/>
+        <p class="card-text text-center fs-5"> 
             Наша команда состоит из четырёх человек: </br><strong>Туманова Алиса,</strong> <strong>Графова Ксения,</strong> <strong>Кознюк София,</strong> <strong>Соколов Михаил</strong>.
         </p>
     </div>
 </div>
 
 <div class="row mt-3">
-    <div class = "cards p-4 shadow rounded-5 border border-3 border-dark">
+    <div class = "cards p-4 shadow rounded-5 border border-2 border-dark">
         <div class="card rounded-5 shadow" id="cardOne">
             <div class="card-body d-flex">
                 <div class="border-end border-3 border-dark me-5">
@@ -54,7 +52,7 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
+  <div class = "cards p-4 shadow rounded-5 border border-2 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
@@ -94,7 +92,7 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
+  <div class = "cards p-4 shadow rounded-5 border border-2 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
@@ -134,7 +132,7 @@
 </div>
 
 <div class="row mt-3">
-  <div class = "cards p-4 shadow rounded-5 border border-3 border-dark mt-4">
+  <div class = "cards p-4 shadow rounded-5 border border-2 border-dark mt-4">
     <div class="card rounded-5 shadow" id="cardOne">
         <div class="card-body d-flex">
             <div class="border-end border-3 border-dark me-5">
