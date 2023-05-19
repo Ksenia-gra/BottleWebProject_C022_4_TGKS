@@ -33,9 +33,9 @@ def bin_relation_transitivity():
         year=datetime.now().year,
         matrix=[],
         vertices=0,
-        str_assim='',
-        str_antit='',
-        rev_matrix=[]
+        str_assim_antit='',
+        rev_matrix=[],
+        rev_matr_str=''
     )
 
 @route('/hamiltonian_cycle')

@@ -1,6 +1,7 @@
+from bottle import route, request, template,view,datetime
 import random
 
-@post('/bin_relation_equality', method='relations')
+#@post('/bin_relation_equality', method='POST')
 def Matrix(num_vert, matrixD):
     
     matrix = [[0] * n for i in range(n)]

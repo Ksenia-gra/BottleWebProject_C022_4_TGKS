@@ -2,12 +2,12 @@ class antitransitivity_class:
     def __init__(self,num_vertex,matrix):
         self.num_vertex=num_vertex
         self.matrix=matrix
-    def is_antisymmetric(self):
-        for i in range(self.num_vertex):
-            for j in range(i, self.num_vertex):
-                if self.matrix[i][j] and self.matrix[j][i]:
-                    return False
-        return True
+    def is_asymmetric(self):
+        for i in range(len(self.matrix)):
+            for j in range(len(self.matrix[0])):
+                if self.matrix[i][j] != self.matrix[j][i]:
+                    return True
+        return False
     def is_antitransitive(self):
         for i in range(self.num_vertex):
             for j in range(self.num_vertex):

@@ -11,25 +11,18 @@ def submit():
             row.append(int(cell) if cell else 0)
         matrix.append(row)
     graf=at(num_vertices,matrix)
+    is_assim=graf.is_asymmetric()
+    is_antit=graf.is_antitransitive()
+    str_assim_antit="Бинарное отношение не обладает одновременно свойствами антитранзитивности и ассиметриности"
          # Обработка введенной матрицы смежности
     if 'printMatr' in request.forms:
-        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim='',
-                        str_antit='',rev_matrix=[])
+        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim_antit='',rev_matrix=[],rev_matr_str='')
     elif 'checkAssim' in request.forms:
-        is_assim=graf.is_antisymmetric()
-        str_assim="Матрица не ассиметрична"
-        if (is_assim):
-            str_assim="Матрица ассиметрична"
-        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim=str_assim,
-                        str_antit='',rev_matrix=[])
-    elif 'checkAntit' in request.forms:
-        is_antit=graf.is_antitransitive()
-        str_antit="Матрица не антитранзитивна"
-        if (is_antit):
-            str_assim="Матрица антитранзитивна"
-        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim='',
-                        str_antit=str_assim,rev_matrix=[])
+        
+        if (is_assim and is_antit):
+            str_assim_antit="Бинарное отношение обладает одновременно свойствами антитранзитивности и ассиметриности"
+        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim_antit=str_assim_antit
+                        ,rev_matrix=[],rev_matr_str='')
     else:
         rev_matrix=graf.reverse_binary_relation()
-        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim='',
-                        str_antit='',rev_matrix=rev_matrix)
+        return template('bin_relation_transitivity', matrix=matrix,year=datetime.now().year,str_assim_antit='',rev_matrix=rev_matrix,rev_matr_str="Обратная матрица:")
