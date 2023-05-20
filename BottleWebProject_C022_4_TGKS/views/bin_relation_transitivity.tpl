@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title='Антитранзитивность бинарного отношения', year=year,str_assim_antit=str_assim_antit,rev_matr_str=rev_matr_str)
+% rebase('layout.tpl', title='Антитранзитивность бинарного отношения', year=year,str_assim_antit=str_assim_antit,rev_matr_str=rev_matr_str,vert=vert)
 <div class="card p-4 shadow-lg border border-dark title-card">
 
 <div class="card-body">
@@ -43,7 +43,7 @@
     <br><br>
 
 <button type="button" class="button p-1 bg-black text-center" onclick="changeValue(-1)">–</button>
-<input type="number" name="vertices" id="vertices" min="2" max="10" value="2" readonly class="raz ">
+<input type="number" name="vertices" id="vertices" min="2" max="10" value={{vert}} readonly class="raz ">
 <button type="button"  class="button p-1 bg-black text-center" onclick="changeValue(1)">+</button>
 <br><br>
 
@@ -54,10 +54,10 @@
 </tbody>
 </table>
 <br>
-<div class="row">
-<input type="submit" class="btn btn-outline-dark mt-1" name="printMatr" value="Вывести матрицу">
-<input type="submit" class="btn btn-outline-dark mt-1" name="checkAssim" value="Ассисиметричность и антитранзитивность">
-<input type="submit" class="btn btn-outline-dark mt-1" name="getReverse" value="Найти обратную матрицу">
+<div class="d-grid gap-2 col-3 mx-auto align-items-center">
+<input type="submit" class="btn btn-dark mt-1" name="solveTask" value="Решить задачу">
+<input type="submit" class="btn btn-dark mt-1" name="solveTaskGenerate" value="Сгенерировать матрицу и решить">
+<input type="submit" class="btn btn-outline-dark mt-1" name="resetBtn" value="Сбросить матрицу">
 </div>
 </form>
 <h3 class="mt-3 text-center"><strong>Результат решения:</strong></h3>
@@ -69,7 +69,7 @@
    
     <tr>
 
-     <th class="text-white">#</th>
+     <th class="text-white"></th>
 
       % for i in range(len(matrix)):
       <th>{{i+1}}</th>
@@ -102,7 +102,7 @@
    
     <tr>
 
-     <th class="text-white">#</th>
+     <th class="text-white"></th>
 
       % for i in range(len(rev_matrix)):
       <th>{{i+1}}</th>

@@ -37,7 +37,7 @@ function changeValue(change) {
 }
 
 $(document).ready(function () {
-    createMatrix(2)
+    createMatrix(document.getElementById("vertices").value)
 });
 $(document).ready(function () {
     $('#matrix input').on('change keyup paste', function () {

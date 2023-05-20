@@ -2,10 +2,10 @@ from bottle import route, request, template,view,datetime,post
 import random
 
 def Matrix(num_vert, matrixD):
-    
+    n = num_vert
     matrix = [[0] * n for i in range(n)]
     matrix = matrixD
-    n = 0
+    
     a = 0
     res = ""
     matrixDop = [[0] * n for i in range(n)]
