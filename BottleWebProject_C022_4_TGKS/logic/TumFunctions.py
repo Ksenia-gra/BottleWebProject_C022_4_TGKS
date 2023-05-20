@@ -1,7 +1,6 @@
 from bottle import route, request, template,view,datetime,post
 import random
 
-@post('/bin_relation_equality', method='relations')
 def Matrix(num_vert, matrixD):
     
     matrix = [[0] * n for i in range(n)]
@@ -27,9 +26,6 @@ def Matrix(num_vert, matrixD):
                 else: break
     if a >= (n * n): res = "Заданное бинарное отношение является эквивалентным."
     else: res = "Заданное бинарное отношение не является эквивалентным."
-
-    #if a >= (n * n): return True
-    #else: return False
 
     for i in range(n):
         for i2 in range(n):
