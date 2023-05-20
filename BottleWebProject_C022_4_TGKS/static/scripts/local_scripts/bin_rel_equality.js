@@ -1,7 +1,7 @@
 // Обработчик события изменения количества вершин
 function changeValue(change) {
     // Получаем элемент input с помощью его ID
-    var input = document.getElementById("vertices");
+    var input = document.getElementById("verticesT");
     // Получаем текущее значение элемента input
     var currentValue = parseInt(input.value);
     // Вычисляем новое значение
