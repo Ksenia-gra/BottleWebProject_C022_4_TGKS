@@ -45,7 +45,9 @@ def hamiltonian_cycle():
     return dict(
         year=datetime.now().year,
         matrix=[],
-        vertices=0
+        amountOfVertices=0,
+        graphPath="",
+        answer=""
     )
 
 @route('/bin_relation_equality')

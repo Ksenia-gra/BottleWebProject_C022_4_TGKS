@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title="Гамильтоновы циклы", year=year)
+% rebase('layout.tpl', title="Гамильтоновы циклы", year=year, graphPath=graphPath, answer=answer)
 
 <div class="card p-4 shadow-lg border border-dark title-card-ham">
 	<div class="card-body">
@@ -9,7 +9,7 @@
 		
 		<button class="btn bg-white" 
 				data-bs-toggle="collapse" 
-				id="readMoreBtn" 
+				id="readTheoryBtn" 
 				data-bs-target="#collapseCard" 
 				aria-expanded="false">Теоретическая сводка</button>
 
@@ -62,9 +62,9 @@
 		    	<h3 class="card-header text-center pt-0 mb-2"><strong>Исходные данные</strong></h3>
 
 				<form method="post" id="form" action="/hamiltonian_cycle" novalidate>
-					<label for="vertices" class="fs-5 form-label">Введите количество вершин:</label>
+					<label for="amountOfVertices" class="fs-5 form-label">Введите количество вершин:</label>
 					
-					<input type="text" name="vertices" class="form-control" id="vertices" min="0" max="10" value="">
+					<input type="text" name="amountOfVertices" class="form-control" id="amountOfVertices" min="0" max="10" value="">
 					<div class="invalid-feedback">
 				    	Введите число вершин от 2 до 10
 				    </div>
@@ -74,8 +74,8 @@
 					<h3 id="fillMatrix" class="fs-4 fw-normal d-none mb-2 text-center">Заполните матрицу смежности</h3>
 					
 					<table id="matrixTable" class="table-sm d-none table text-center table-borderless">
-						<caption id="matrixCaption" class="text-center">0 при отсутствии связи, 1 при наличии связи</caption>
 						<tbody id="matrix"></tbody>
+						<caption id="matrixCaption" class="text-center">0 при отсутствии связи, 1 при наличии связи</caption>
 					</table>		
 						
 					</br>
@@ -101,26 +101,67 @@
 						% end
 					</tbody>
 				</table>
+				<div class="text-center" id="answers">
+					%counter = 1
+					%for i in answer:
+						<p class="fs-5">{{counter}} цикл: {{i}}</p>
+						%counter += 1
+					%end
+				</div>
 			</div>
 		</div>	
 	</div>
-
 </div>
 
-<script>	
-	$("#vertices").on('change keyup paste', function() 
+<div class="row mt-4">
+	<div class="col">
+		<div class="card shadow" id="cardThree">
+			<div class="card-body text-center p-4">
+				<h3 class="card-header text-center pt-0 mb-2"><strong>Граф</strong></h3>
+				<img src="{{graphPath}}" class="p-4" id="graph">
+			</div>
+		</div>	
+	</div>
+</div>
+
+<script>
+	window.addEventListener('beforeunload', () => { 
+		$("#answers").empty()
+    	$("#fillMatrix").addClass('d-none')
+    	$("#filledMatrix").empty()
+    	$("#matrixTable").empty()
+    	$("#graph").empty()
+    	$("input[type=submit]").attr("disabled", "disabled")
+	});
+
+	window.addEventListener('unload', () => { 
+		$("#answers").empty()
+    	$("#fillMatrix").addClass('d-none')
+    	$("#filledMatrix").addClass('d-none')
+    	$("#matrixTable").addClass('d-none')
+    	$("input[type=submit]").attr("disabled", "disabled")
+	});
+
+	$(document).ready(function() {
+        const readTheory = "Теоретическая сводка" 
+        $("#readTheoryBtn").click(function(){
+            $(this).text($(this).text() == readTheory ? "Свернуть" : readTheory)
+        });
+    })
+
+	$("#amountOfVertices").on('change keyup paste', function() 
 	{
 		txt = $(this).val()
 		num = Number(txt)
+
+		$("#answers").empty()
 
 		if (txt != '' && txt != num || num < 2 || num > 10)
 		{
 			$(this).addClass('is-invalid')
 			$("#fillMatrix").addClass('d-none')
 			$("#filledMatrix").addClass('d-none')
-			$("#matrixCaption").addClass('d-none')
 			$("#matrixTable").addClass('d-none')
-			$("#matrix").addClass('d-none')
 			$("input[type=submit]").attr("disabled", "disabled")
 		}
 		else 
@@ -128,9 +169,7 @@
 			$(this).removeClass('is-invalid')
 			$("#fillMatrix").removeClass('d-none')
 			$("#filledMatrix").addClass('d-none')
-			$("#matrixCaption").removeClass('d-none')
-			$("#matrixTable").removeClass('d-none')	
-			$("#matrix").removeClass('d-none')
+			$("#matrixTable").removeClass('d-none')
 			$("input[type=submit]").removeAttr("disabled")
 			changeVerticesNum(num)
 		}

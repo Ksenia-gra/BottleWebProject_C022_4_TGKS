@@ -37,6 +37,7 @@
     <Compile Include="logic\create_matrix_transitivity.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="logic\hamiltonian_cycles_logic.py" />
     <Compile Include="logic\hamiltonian_form_handler.py" />
     <Compile Include="logic\matrix_equality.py" />
     <Compile Include="logic\max_flow_handler.py" />
