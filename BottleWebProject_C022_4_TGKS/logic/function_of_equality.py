@@ -1,5 +1,3 @@
-from bottle import route, request, template,view,datetime,post
-
 class function_of_equality:
     def __init__(self, num_vert, matrix):
         self.num_vert = num_vert

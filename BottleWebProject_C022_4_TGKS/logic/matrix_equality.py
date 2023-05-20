@@ -17,5 +17,6 @@ def submit():
     enterMatrix = function_of_equality(num_vertices, matrix)
     is_equality = enterMatrix.is_equality_matrix()
     dop_matrix = enterMatrix.dop_relation()
+
     # Обработка введенной матрицы смежности
     return template('bin_relation_equality', matrix = matrixD, result = is_equality, dopMatrix = dop_matrix, year = datetime.now().year)
