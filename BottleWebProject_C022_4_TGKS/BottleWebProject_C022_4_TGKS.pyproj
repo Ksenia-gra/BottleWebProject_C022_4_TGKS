@@ -44,6 +44,9 @@
     <Compile Include="logic\max_flow_handler.py" />
     <Compile Include="logic\test_tum_unittest.py" />
     <Compile Include="routes.py" />
+    <Compile Include="unitTests\test_antitransitivity_class.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="logic\" />
