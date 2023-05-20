@@ -1,4 +1,4 @@
-% rebase('layout.tpl', title='Максимальный поток', year=year)
+% rebase('layout.tpl', title='Максимальный поток',image=image,max_flow=max_flow, year=year)
 
 
 <div class="card p-4 shadow-lg border border-dark bg-card-max">
@@ -34,10 +34,9 @@
                 <label class="fs-5">Количество вершин:</label>
                 <br>
                 <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(-1);removeOptions();" id="button-addon1"><</button>
-                    <input onchange="matrixCreate()" type="number" style="text-align:center;" readonly name="vertex" id="vertex" size="5" min="2" max="10" value="2" >
-                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(1);removeOptions();" id="button-addon1">></button>
-                </div>
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(-1, source[source.selectedIndex].value, stock[stock.selectedIndex].value);removeOptions();" id="button-addon1"><</button>
+                    <input type="number" style="display: grid; justify-content: center;" readonly name="vertex" id="vertex" size="5" min="2" max="10" value="2" >
+                    <button class="btn btn-outline-secondary bg-white rounded-0 text-dark" type="button" onclick="changeValue(1, source[source.selectedIndex].value, stock[stock.selectedIndex].value);removeOptions();" id="button-addon1">></button> </div>
                 <label class="fs-5">Вершина источника:</label>
 
                <select class="form-select" style="width:150px;" name="source" id="source" aria-label=".form-select-sm example" >
@@ -55,50 +54,37 @@
                     <option value ="2">2</option>
 
                 </select>
+                <br>
+
+                <div>
+                    <label class="fs-5 ps-4">Заполнение пропускных способностей дуг:</label>
+                    <br>
+                        <div style="text-align: -webkit-center;">
+                            <table class="mt-3 table-responsive">
+                                <tbody id="matrix"></tbody>
+                            </table>
+                        </div>
+                    <br>
+                     <div class="border-top text-center border-dark border-2  pt-3">
+                        <button type="submit" class="fs-6 btn btn-light text-dark" style="border: groove; width:200px;">Генерация матрицы</button>   
+                        <button type="submit" class="fs-6 btn btn-light text-dark" style="border: groove; width:200px;">Граф</button>        
+                 </div>
+                </div>         
             </form>
              <br>
-
-            <form method="post" action="/maximum_flow">
-                <label class="fs-5 ps-4">Заполнение пропускных способностей дуг:</label>
-                <br>
-                    <div style="text-align: -webkit-center;">
-                        <table class="mt-3 table-responsive">
-                            <tbody id="matrix"></tbody>
-                        </table>
-                    </div>
-                <br>
-                 <div class="border-top text-center border-dark border-3  pt-3">
-                   <a type="submit" class="fs-6 ms-4 btn btn-light text-dark" style="border: groove; width:100px;" role="button">Матрица</a>
-                    <a type ="graph" class="fs-6 btn btn-light text-dark" style="border: groove; width:100px;" role="button">Граф</a>           
-                 </div>
-            </form>
         </div>
 
         <div class="border-end border border-dark"></div>
 
         <div class="col p-4">
         <h3 class="card-title fs-3" style="text-align:center;"><strong>Результат решения</strong></h5>
-            <table class="table">
-                <thead>
-                    <tr>
-                        % for i in range(len(matrix)):
-                        <th>{{i+1}}</th>
-                        % end
-                    </tr>
-                </thead>
-                <tbody>
-                    % for row in matrix:
-                    <tr>
-                        % for cell in row:
-                        <td>{{cell}}</td>
-                        % end
-                    </tr>
-                    % end
-                </tbody>
-            </table>
+             <p class="text-center">
+                <img src="{{image}}">
+            </p>
+           <p class="text-center fs-5">
+            Максимальный поток: {{max_flow}}
+           </p>
         </div>
+    </div>
 </div>
-</div>
-<script src="/static/scripts/local_scripts/max_value.js">
-
-</script>
+<script src="/static/scripts/local_scripts/max_flow.js"></script>

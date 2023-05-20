@@ -33,9 +33,9 @@ def bin_relation_transitivity():
         year=datetime.now().year,
         matrix=[],
         vertices=0,
-        str_assim='',
-        str_antit='',
-        rev_matrix=[]
+        str_assim_antit='',
+        rev_matrix=[],
+        rev_matr_str=''
     )
 
 @route('/hamiltonian_cycle')
@@ -45,7 +45,9 @@ def hamiltonian_cycle():
     return dict(
         year=datetime.now().year,
         matrix=[],
-        vertices=0
+        amountOfVertices=0,
+        graphPath="",
+        answer=""
     )
 
 @route('/bin_relation_equality')
@@ -68,6 +70,7 @@ def maximum_flow():
     return dict(
         title='Максимальный поток',
         year=datetime.now().year,
-        matrix=[],
-        vertex=0
+        image = '',
+        max_flow = 0,
+        vertexCount=0
     )

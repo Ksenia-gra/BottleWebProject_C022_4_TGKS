@@ -1,10 +1,9 @@
-% rebase('layout.tpl', title='Антитранзитивность бинарного отношения', year=year)
-
+% rebase('layout.tpl', title='Антитранзитивность бинарного отношения', year=year,str_assim_antit=str_assim_antit,rev_matr_str=rev_matr_str)
 <div class="card p-4 shadow-lg border border-dark title-card">
 
 <div class="card-body">
 
-<h4 class="card-title text-light">Ассиметричность и антитранзитивность.Нахождение обратного отношения</h4>
+<h4 class="card-title text-light">Ассисиметричность и антитранзитивность.Нахождение обратного отношения</h4>
 <br>
        
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -23,7 +22,7 @@
                </div>
   <div class="tab-pane fade nav-btn fs-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><strong>Антитранзитивность </strong> - это свойство, которое говорит, что если одна вершина имеет отношение к другой вершине, а другая вершина имеет отношение к третьей вершине, то первая вершина не может иметь отношение к третьей 
                 вершине.</div>
-  <div class="tab-pane fade nav-btn fs-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"><strong>Обратное бинарное отношение</strong> получается путем транспонирования исходной матрицы смежности.</div>
+  <div class="tab-pane fade nav-btn fs-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"><strong>Обратное бинарное отношение</strong> получается путем транспонирования исходной матрицы смежности.полных</strong></div>
 
 
  </div>
@@ -32,9 +31,9 @@
 
 <div class="card p-4 shadow border border-black" >
 <div class="card-body">
-<div class="alert alert-secondary d-flex align-items-center text-center" role="alert">
+<div class="alert alert-secondary d-flex align-items-center " role="alert">
 <i class="fa fa-info-circle fs-1 me-3" aria-hidden="true"></i>
-  Сначала выберите количество вершин, потом в появившихся полях отмечайте существующие в матрице смежности связи
+  Сначала выберите количество вершин, потом в появившихся полях отмечайте существующие связи между вершинами в матрице смежности
 </div>
     <h3 class="card-title text-center"><strong>Решение задачи</strong></h5>
     
@@ -55,12 +54,15 @@
 </tbody>
 </table>
 <br>
+<div class="row">
 <input type="submit" class="btn btn-outline-dark mt-1" name="printMatr" value="Вывести матрицу">
-<input type="submit" class="btn btn-outline-dark mt-1" name="checkAssim" value="Проверить ассиметричность">
-<input type="submit" class="btn btn-outline-dark mt-1" name="checkAntit" value="Проверить антитранзитивность">
+<input type="submit" class="btn btn-outline-dark mt-1" name="checkAssim" value="Ассисиметричность и антитранзитивность">
 <input type="submit" class="btn btn-outline-dark mt-1" name="getReverse" value="Найти обратную матрицу">
+</div>
 </form>
-
+<h3 class="mt-3 text-center"><strong>Результат решения:</strong></h3>
+<p class=" text-center mt-3">{{str_assim_antit}}</p>
+<h5 class="text-center mt-3">Исходная матрица смежности:</h5>
 <div class="d-flex justify-content-center">
 <table class="table table-bordered text-center mt-3">
     <thead>
@@ -93,6 +95,7 @@
 </tbody>
 </table>
 </div>
+<h5 class="text-center mt-3">{{rev_matr_str}}</h5>
 <div class="d-flex justify-content-center">
 <table class="table table-bordered text-center mt-3">
     <thead>

@@ -18,7 +18,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>BottleWebProject_C022_4_TGKS</Name>
     <RootNamespace>BottleWebProject_C022_4_TGKS</RootNamespace>
-    <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -37,6 +37,7 @@
     <Compile Include="logic\create_matrix_transitivity.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="logic\hamiltonian_cycles_logic.py" />
     <Compile Include="logic\hamiltonian_form_handler.py" />
     <Compile Include="logic\matrix_equality.py" />
     <Compile Include="logic\max_flow_handler.py" />
@@ -63,6 +64,7 @@
     <Content Include="static\content\bin_relation_transitivity.css">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="static\content\hamiltonian_cycle.css" />
     <Content Include="static\content\index.css" />
     <Content Include="static\content\layout.css" />
     <Content Include="static\content\max_flow.css">
