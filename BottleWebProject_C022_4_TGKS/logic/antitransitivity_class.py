@@ -1,3 +1,4 @@
+import random
 class antitransitivity_class:
     def __init__(self,num_vertex,matrix):
         self.num_vertex=num_vertex
@@ -10,6 +11,9 @@ class antitransitivity_class:
                 if self.matrix[i][j] != self.matrix[j][i]:
                     return True
         return False
+    def generate_matrix(self):
+        self.num_vertex=random.randint(2, 10)
+        self.matrix = [[ random.randint(0, 1) for x in range(self.num_vertex)] for y in range(self.num_vertex)]
     def is_antitransitive(self):
         #функция проверки антитранзитивности,если между двумя вершинами существует отношение и они обе имеют отношение
         # к третьей функция возвращает false,иначе true

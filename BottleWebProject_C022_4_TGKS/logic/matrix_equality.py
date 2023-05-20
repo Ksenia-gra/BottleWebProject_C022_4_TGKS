@@ -3,10 +3,8 @@ from logic.function_of_equality import function_of_equality
 
 @route('/bin_relation_equality', method='POST')
 def submit():
-    #получение числа вершин графа
     num_vertices = int(request.forms.get('verticesT'))
     matrix = []
-    #создание матрицы на основе отмеченных ячеек
     for i in range(num_vertices):
         row = []
         for j in range(num_vertices):

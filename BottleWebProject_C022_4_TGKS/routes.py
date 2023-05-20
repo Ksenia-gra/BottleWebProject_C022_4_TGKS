@@ -35,7 +35,8 @@ def bin_relation_transitivity():
         vertices=0,
         str_assim_antit='',
         rev_matrix=[],
-        rev_matr_str=''
+        rev_matr_str='',
+        vert=2
     )
 
 @route('/hamiltonian_cycle')
