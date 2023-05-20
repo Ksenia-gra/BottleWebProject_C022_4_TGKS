@@ -26,9 +26,6 @@ def Matrix(num_vert, matrixD):
     if a >= (n * n): res = "Заданное бинарное отношение является эквивалентным."
     else: res = "Заданное бинарное отношение не является эквивалентным."
 
-    #if a >= (n * n): return True
-    #else: return False
-
     for i in range(n):
         for i2 in range(n):
                 if matrix[i][i2] == 1:
