@@ -68,6 +68,7 @@ def maximum_flow():
     return dict(
         title='Максимальный поток',
         year=datetime.now().year,
-        matrix=[],
-        vertex=0
+        image = '',
+        max_flow = 0,
+        vertexCount=0
     )
