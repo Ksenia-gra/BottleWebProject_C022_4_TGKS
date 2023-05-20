@@ -37,10 +37,12 @@
     <Compile Include="logic\create_matrix_transitivity.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="logic\function_of_equality.py" />
     <Compile Include="logic\hamiltonian_cycles_logic.py" />
     <Compile Include="logic\hamiltonian_form_handler.py" />
     <Compile Include="logic\matrix_equality.py" />
     <Compile Include="logic\max_flow_handler.py" />
+    <Compile Include="logic\test_tum_unittest.py" />
     <Compile Include="routes.py" />
     <Compile Include="logic\TumFunctions.py">
       <SubType>Code</SubType>
@@ -77,7 +79,9 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\images\bg_for_max_flow.jpg" />
     <Content Include="static\images\graf.png" />
+    <Content Include="static\images\graph.png" />
     <Content Include="static\images\hamiltonian_cycle_bg.png" />
+    <Content Include="static\images\hamiltonian_graph.png" />
     <Content Include="static\images\index_card_bg.png" />
     <Content Include="static\images\logo.png" />
     <Content Include="static\images\logo_with_title.png" />
