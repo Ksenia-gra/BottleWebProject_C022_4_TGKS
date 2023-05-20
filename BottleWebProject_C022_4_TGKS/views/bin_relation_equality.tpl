@@ -43,6 +43,7 @@
             </table>
             <br>
             <input type="submit" class="btn btn-outline-dark mt-1" value="Решить задачу">
+            <input type="submit" class="btn btn-outline-dark mt-1" name="randomGenerate" value="Сгенерировать матрицу">
         </form>
 
         <div class="d-flex justify-content-center">

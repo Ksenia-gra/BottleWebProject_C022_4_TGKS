@@ -1,4 +1,5 @@
 from bottle import route, request, template, view, datetime
+import random
 from logic.function_of_equality import function_of_equality
 
 @route('/bin_relation_equality', method='POST')
@@ -13,10 +14,6 @@ def submit():
             cell = request.forms.get('matrix[{}][{}]'.format(i, j))
             row.append(int(cell) if cell else 0)
         matrix.append(row)
-    #вызов функции с результатом
-    enterMatrix = function_of_equality(num_vertices, matrix)
-    is_equality = enterMatrix.is_equality_matrix()
-    dop_matrix = enterMatrix.dop_relation()
-
+    Matrix(num_vertices, matrix)
     # Обработка введенной матрицы смежности
     return template('bin_relation_equality', matrix = matrix, res = is_equality, dopMatrix = dop_matrix, year = datetime.now().year)
