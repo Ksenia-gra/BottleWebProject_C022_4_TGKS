@@ -1,4 +1,6 @@
 import random
+from datetime import datetime as dt
+import os.path
 class antitransitivity_class:
     def __init__(self,num_vertex,matrix):
         if(num_vertex<2):
@@ -37,3 +39,9 @@ class antitransitivity_class:
                 if self.matrix[i][j]==1:
                     rev_matrix[j][i] = 1
         return rev_matrix
+
+    def logging_to_file(self,file_name):
+        f=open(file_name,'a')
+        f.write("------------------- \n")
+        f.write("Количество вершин: {0} матрица: {1} \t Дата и время: {2} \n".format(self.num_vertex,self.matrix,dt.now()))
+        f.close()

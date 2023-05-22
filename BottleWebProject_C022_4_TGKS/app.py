@@ -9,7 +9,7 @@ import sys
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
 
-import logic.create_matrix_transitivity
+import logic.antitransitivity_form_handler
 import logic.matrix_equality
 import logic.hamiltonian_form_handler
 import logic.max_flow_handler

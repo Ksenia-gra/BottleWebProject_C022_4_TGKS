@@ -23,6 +23,7 @@ def submit():
     is_antit=graf.is_antitransitive()
     str_assim_antit="Бинарное отношение не обладает одновременно свойствами антитранзитивности и ассиметриности"
     num_vertices=str(num_vertices)
+    graf.logging_to_file("log_files/antitransitivity_log.txt")
     if 'resetBtn' in request.forms:
         #если нажата кнопка сбросить матрицу
         return template('bin_relation_transitivity', matrix=[],year=datetime.now().year,str_assim_antit=''
