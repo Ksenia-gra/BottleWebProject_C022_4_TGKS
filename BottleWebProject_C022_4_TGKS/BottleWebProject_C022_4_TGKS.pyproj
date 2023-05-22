@@ -20,6 +20,8 @@
     <RootNamespace>BottleWebProject_C022_4_TGKS</RootNamespace>
     <InterpreterId>MSBuild|env4|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>unitTests.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,9 +44,12 @@
     <Compile Include="logic\hamiltonian_form_handler.py" />
     <Compile Include="logic\matrix_equality.py" />
     <Compile Include="logic\max_flow_handler.py" />
-    <Compile Include="logic\test_tum_unittest.py" />
+    <Compile Include="unitTests\test_tum_unittest.py" />
     <Compile Include="routes.py" />
     <Compile Include="unitTests\test_antitransitivity_class.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="unitTests\__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

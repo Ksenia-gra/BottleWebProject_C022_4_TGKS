@@ -1,7 +1,12 @@
 import random
 class antitransitivity_class:
     def __init__(self,num_vertex,matrix):
+        if(num_vertex<2):
+            raise ValueError('Неверно введено количество вершин матрицы')
+        
         self.num_vertex=num_vertex
+        if(matrix is None or matrix==[]):
+            matrix= [[ 0 for x in range(self.num_vertex)] for y in range(self.num_vertex)]
         self.matrix=matrix
     def is_asymmetric(self):
         #функция проверки ассиметричности матрицы,возвращает true если при наличии отношения между 
@@ -19,7 +24,7 @@ class antitransitivity_class:
         # к третьей функция возвращает false,иначе true
         for i in range(self.num_vertex):
             for j in range(self.num_vertex):
-                if self.matrix[i][j]:
+                if self.matrix[i][j]:   
                     for k in range(self.num_vertex):
                         if self.matrix[j][k] and self.matrix[i][k]:
                             return False

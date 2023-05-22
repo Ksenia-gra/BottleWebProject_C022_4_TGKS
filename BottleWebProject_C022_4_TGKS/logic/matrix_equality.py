@@ -14,6 +14,14 @@ def submit():
             cell = request.forms.get('matrix[{}][{}]'.format(i, j))
             row.append(int(cell) if cell else 0)
         matrix.append(row)
-    Matrix(num_vertices, matrix)
-    # Обработка введенной матрицы смежности
+   #создание экземпляра класса
+    enterMatrix = function_of_equality(num_vertices, matrix)
+
+    if 'randomGenerate' in request.forms:
+        #если нажата кнопка сгенерировать и решить задачу генирация матрицы происходит рандомно
+        for i in range(num_vertices):
+            for i2 in range(num_vertices):
+                    enterMatrix.matrix[i][i2] = random.randint(0, 1)
+    is_equality = enterMatrix.is_equality_matrix() + " Ниже преведено дополнительное отношение заданного: "
+    dop_matrix = enterMatrix.dop_relation()
     return template('bin_relation_equality', matrix = matrix, res = is_equality, dopMatrix = dop_matrix, year = datetime.now().year)
