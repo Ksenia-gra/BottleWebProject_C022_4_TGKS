@@ -93,23 +93,23 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         self.assertEqual(result, expected)
 
 
-    def test_Dop_Relation_equality_matrix_right_equality_matrix(self):
+    def test_dop_relation_equality_matrix_right_equality_matrix(self):
         #arrange
         vert = 8
         matrix = [[1, 0, 0, 0, 0, 1, 0, 1], [0, 1, 1, 1, 0, 1, 0, 1], [0, 1, 1, 0, 0, 1, 0, 1], [0, 0, 0, 1, 0, 1, 0, 1],
                  [0, 0, 0, 1, 1, 0, 0, 1], [0, 0, 0, 1, 1, 0, 0, 1], [0, 0, 0, 1, 1, 0, 0, 1], [0, 0, 0, 1, 1, 0, 0, 1]]
-        expected = [[0, 1, 1, 1, 1, 0, 1, 0], [1, 0, 0, 0, 1, 0, 1, 0], [1, 0, 0, 0, 1, 0, 1, 0], [1, 1, 1, 0, 1, 0, 1, 0],
+        expected = [[0, 1, 1, 1, 1, 0, 1, 0], [1, 0, 0, 0, 1, 0, 1, 0], [1, 0, 0, 1, 1, 0, 1, 0], [1, 1, 1, 0, 1, 0, 1, 0],
                    [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0]]
 
         #act
         example = function_of_equality(vert, matrix)
-        result = example.Dop_Relation()
+        result = example.dop_relation()
 
         #assert
         self.assertEqual(result, expected)
 
 
-    def test_Dop_Relation__notequality_matrix_right_not_equality_matrix(self):
+    def test_dop_relation__not_equality_matrix_right_not_equality_matrix(self):
         #arrange
         vert = 3
         matrix = [[0, 1, 0], [1, 0, 0], [1, 1, 0]]
@@ -117,7 +117,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
 
         #act
         example = function_of_equality(vert, matrix)
-        result = example.Dop_Relation()
+        result = example.dop_relation()
 
         #assert
         self.assertEqual(result, expected)
