@@ -1,5 +1,5 @@
 # Функция для проверки того, может ли вершина v быть добавлена по индексу pos в гамильтонов цикл
-def isSafe(v, graph, path, pos):
+def isAddingSafe(v, graph, path, pos):
 
 	# Если вершина смежна с вершиной, добавленной ранее
 	if graph[path[pos - 1]][v] == 0:
@@ -14,12 +14,15 @@ def isSafe(v, graph, path, pos):
 
 # Для проверки наличия Гамильтонова цикла
 hasCycle = False
-cycles = []
+cycles = list()
 
 # Функция для нахождения всех возможных гамильтоновых циклов
-def hamCycle(graph):
+def getHamCycles(graph):
 	global hasCycle
 	global cycles
+
+	cycles = []
+	hasCycle = False
 
 	# Для хранения вершин - пути
 	path = []
@@ -31,15 +34,16 @@ def hamCycle(graph):
 	visited[0] = True
 
 	# Вызов функции для поиска всех гамильтоновых циклов
-	FindHamCycle(graph, 1, path, visited)
+	findHamCycle(graph, 1, path, visited)
 
 	if hasCycle == False:
 		# Если для данного графа невозможен гамильтонов цикл, то
-		return "В данном графе нет Гамильтоновых циклов!"
+		return ["В данном графе нет Гамильтоновых циклов!"]
+
 	return cycles
 
 # Рекурсивная функция для нахождения всех гамильтоновых циклов
-def FindHamCycle(graph, pos, path, visited):
+def findHamCycle(graph, pos, path, visited):
 
 	global hasCycle
 	global cycles
@@ -53,7 +57,13 @@ def FindHamCycle(graph, pos, path, visited):
 			# Include source vertex into the path and print the path
 			path.append(0)
 
+			for i in range(len(path)):
+				path[i] += 1
+
 			cycles.append(list(path))
+
+			for i in range(len(path)):
+				path[i] -= 1
 
 			# Удалите добавленную исходную вершину
 			path.pop()
@@ -66,12 +76,12 @@ def FindHamCycle(graph, pos, path, visited):
 	for v in range(len(graph)):
 	
 		# Проверьте, можно ли добавить эту вершину в цикл
-		if isSafe(v, graph, path, pos) and not visited[v]:
+		if isAddingSafe(v, graph, path, pos) and not visited[v]:
 			path.append(v)
 			visited[v] = True
 
 			# Повторите, чтобы построить остальную часть пути
-			FindHamCycle(graph, pos + 1, path, visited)
+			findHamCycle(graph, pos + 1, path, visited)
 
 			# Удалите текущую вершину из пути и обработайте другие вершины
 			visited[v] = False

@@ -1,6 +1,6 @@
 from bottle import route, request, template, view, datetime
 import random
-import logic.function_of_equality
+from logic.function_of_equality import function_of_equality as foe
 
 @route('/bin_relation_equality', method='POST')
 def submit():
@@ -15,7 +15,7 @@ def submit():
             row.append(int(cell) if cell else 0)
         matrix.append(row)
    #создание экземпляра класса
-    enterMatrix = function_of_equality(num_vertices, matrix)
+    enterMatrix = foe(num_vertices, matrix)
 
     if 'randomGenerate' in request.forms:
         #если нажата кнопка сгенерировать и решить задачу генирация матрицы происходит рандомно

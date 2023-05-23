@@ -1,6 +1,6 @@
 import unittest
 import sys
-from logic.function_of_equality import function_of_equality
+from logic.function_of_equality import function_of_equality as foe
 
 class test_function_of_equality_check_tests(unittest.TestCase):
     def test_is_equality_matrix_matrix_are_equality(self):
@@ -10,7 +10,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -27,7 +27,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -41,7 +41,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -55,7 +55,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение не является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -72,7 +72,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение не является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -86,7 +86,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = "Заданное бинарное отношение не является эквивалентным."
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.is_equality_matrix()
 
         #assert
@@ -102,7 +102,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
                    [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 1, 0]]
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.dop_relation()
 
         #assert
@@ -116,7 +116,7 @@ class test_function_of_equality_check_tests(unittest.TestCase):
         expected = [[1, 0, 1], [0, 1, 1], [0, 0, 1]]
 
         #act
-        example = function_of_equality(vert, matrix)
+        example = foe(vert, matrix)
         result = example.dop_relation()
 
         #assert
