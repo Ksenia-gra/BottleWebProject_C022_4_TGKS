@@ -1,6 +1,9 @@
 //Обработчик для загрузки матрицы при загрузке страницы
 window.addEventListener('load', () => {
-    changeValue(0, 1, 2);
+    var tBody = document.getElementById("matrix")
+    if (tBody.childElementCount === 0) {
+        changeValue(0, 1, 2);
+    }
 });
 
 //Получаем по id элемент input 
@@ -65,7 +68,7 @@ function changeValue(change, source, stock) {
     // Вычисляем новое значение
     var newValue = num + change;
     // cоздаем новую матрицу
-    if (newValue >= parseInt(inputVertex.min) && newValue <= parseInt(inputVertex.max)) {
+    if (newValue >= 2 && newValue <= 10) {
         inputVertex.value = newValue;
         document.getElementById("matrix").innerHTML = "";
         if (source != Number(source) || source == null) {
@@ -91,7 +94,6 @@ function removeOptions() {
     //Создаем элемент списка
     var optionSource = document.createElement("option");
     var optionStock = document.createElement("option");
-    
     //Циклом проходимся по списку источника
     for (var i = selectSource.options.length - 1; i >= 0; i--) {
         //Получаем элементы списка источника
@@ -147,28 +149,10 @@ function generateMatrix(countVertices, source, stock) {
     if (stock > countVertices) {
         stock = countVertices;
     }
+
     //Получаем по id таблицу и создаем элемент table для заполнения 
     const table = document.getElementById("matrix");
     const tbl = document.createElement('table');
-
-    //Добавляем нумерацию столбцов
-    for (let i = 0; i <= countVertices; i++) {
-        const th = document.createElement('th');
-        th.innerText = i ;
-        th.style.textAlign = "center";
-        if (i == 0) {
-            th.innerText = "";
-        }
-        tbl.appendChild(th);
-    }
-
-    //Элемент первой строки матрицы
-    var thFirst = document.createElement('th');
-    thFirst.innerText = source;
-
-    //Элемент последей строки матрицы
-    var thLast = document.createElement('th');
-    thLast.innerText = stock;
 
     //Удаление вершин источника и стока из массива всех вершин   
     if (source > stock) {
@@ -179,35 +163,85 @@ function generateMatrix(countVertices, source, stock) {
         nums.splice(source - 1, 1);
         nums.splice(stock - 2, 1);
     }
-    
+
+    //Добавляем нумерацию столбцов
+    for (let i = 0; i <= countVertices; i++) {
+        const th = document.createElement('th');
+        if (i == 0) {
+            th.innerText = "";
+        }
+        else if (i == 1) {
+            th.innerText = source;
+        }
+        else if (i == countVertices) {
+            th.innerText = stock;
+        }
+        else {
+            th.innerText = nums[i - 2];
+        }
+
+        th.style.textAlign = "center";
+        tbl.appendChild(th);
+    }
 
     //Добавляем нумерацию строк
     for (let i = 0; i < countVertices; i++) {
         const tr = tbl.insertRow();
-        //
+        const th = document.createElement('th');
+
         if (i == 0) {
-            tr.appendChild(thFirst);
+            th.innerText = source;
         }
-        //
         else if (i == countVertices - 1) {
-            tr.appendChild(thLast);
+            th.innerText = stock;
         }
-        //
         else {
-            const th = document.createElement('th');
             th.innerText = nums[i - 1];
-            tr.appendChild(th);
+
         }
+
+        tr.appendChild(th);
 
         //Заполнение таблицы
         for (let j = 0; j < countVertices; j++) {
-
             //Создаем элемент input для ввода
             const input = document.createElement("input");
             //Создаем ячейки таблицы
             const td = document.createElement("td");
             //Задаем имя и стили для input
-            input.name = "matrix[" + i + "][" + j + "]";
+            if (i == 0) {
+                if (j == 0) {
+                    input.name = "matrix[" + source.toString() + "][" + source.toString() + "]";
+                }
+                else if (j == countVertices - 1) {
+                    input.name = "matrix[" + source.toString() + "][" + stock.toString() + "]";
+                }
+                else {
+                    input.name = "matrix[" + source.toString() + "][" + (nums[j - 1]).toString() + "]";
+                }
+            }
+            else if (i == countVertices - 1) {
+                if (j == 0) {
+                    input.name = "matrix[" + stock + "][" + source + "]";
+                }
+                else if (j == countVertices - 1) {
+                    input.name = "matrix[" + stock + "][" + stock + "]";
+                }
+                else {
+                    input.name = "matrix[" + stock + "][" + (nums[j - 1]).toString() + "]";
+                }
+            }
+            else {
+                if (j == 0) {
+                    input.name = "matrix[" + (nums[i - 1]).toString() + "][" + source + "]";
+                }
+                else if (j == countVertices - 1) {
+                    input.name = "matrix[" + (nums[i - 1]).toString() + "][" + stock + "]";
+                }
+                else {
+                    input.name = "matrix[" + (nums[i - 1]).toString() + "][" + (nums[j - 1]).toString() + "]";
+                }
+            }
             input.style.width = '45px';
             input.style.height = '40px';
             input.style.textAlign = "center";
@@ -224,8 +258,10 @@ function generateMatrix(countVertices, source, stock) {
                 //Берем индексы для заполнения обратной ячейки
                 firstNumber = name.split("[")[1].substring(0, 1);
                 secondNumber = name.split("[")[2].substring(0, 1);
+
                 //Ввод только цифры
                 num = Number(txt)
+
                 if (txt != '' && txt != num) {
                     //Что не является цифрой - удаляем
                     $(this).val('');

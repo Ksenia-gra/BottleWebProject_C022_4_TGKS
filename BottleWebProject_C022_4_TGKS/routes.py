@@ -73,5 +73,8 @@ def maximum_flow():
         year=datetime.now().year,
         image = '',
         max_flow = 0,
-        vertexCount=0
+        matrix=[],
+        vertexCount = 0,
+        vertexSource = 0, 
+        vertexStock = 0
     )

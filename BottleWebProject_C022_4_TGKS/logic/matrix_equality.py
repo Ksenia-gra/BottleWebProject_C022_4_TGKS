@@ -1,6 +1,6 @@
 from bottle import route, request, template, view, datetime
 import random
-from logic.function_of_equality import function_of_equality
+import logic.function_of_equality
 
 @route('/bin_relation_equality', method='POST')
 def submit():

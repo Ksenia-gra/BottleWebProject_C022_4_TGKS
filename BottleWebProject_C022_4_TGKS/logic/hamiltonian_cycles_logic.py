@@ -1,8 +1,4 @@
 # Функция для проверки того, может ли вершина v быть добавлена по индексу pos в гамильтонов цикл
-from sys import call_tracing
-from typing import cast
-
-
 def isSafe(v, graph, path, pos):
 
 	# Если вершина смежна с вершиной, добавленной ранее
